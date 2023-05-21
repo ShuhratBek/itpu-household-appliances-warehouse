@@ -1,2 +1,2 @@
-# itpu-household-applience-warehouse
+# itpu-household-appliances-warehouse
 ITPU Course project
