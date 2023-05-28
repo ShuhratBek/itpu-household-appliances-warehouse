@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/ShuhratBek/itpu-household-appliances-warehouse/compare/v1.0.0...v1.1.0) (2023-05-28)
+
+
+### Features
+
+* add entities ([6225c9a](https://github.com/ShuhratBek/itpu-household-appliances-warehouse/commit/6225c9a466a947181db7c825d5e9d30af11df09a))
+* semantic versioning ([ca0ccf3](https://github.com/ShuhratBek/itpu-household-appliances-warehouse/commit/ca0ccf3424048112c508eefbac66cb8bb9d5e31e))
+
 ## 1.0.0 (2023-05-21)
 
 
