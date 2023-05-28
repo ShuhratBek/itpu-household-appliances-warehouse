@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Power Consumption (W),Suction Power (W),Color,Weight (kg),Width (cm),Height (cm),Depth (cm),Voltage (V),Energy Efficiency Rating
+30001,Dyson V11 Absolute,Handheld Vacuum Cleaner,Dyson,V11 Absolute,Cleaning Appliances,599.99,5,600,185,Absolute Black,2.97,25.0,128.6,26.1,220-240,A
+30002,Shark NZ801UKT,Upright Vacuum Cleaner,Shark,NZ801UKT,Cleaning Appliances,349.99,8,750,200,True Pet,4.5,30.5,117.0,34.5,220-240,B
+30003,Miele Complete C3,Canister Vacuum Cleaner,Miele,Complete C3,Cleaning Appliances,399.99,6,1200,1800,Obsidian Black,8.2,49.0,23.0,28.0,220-240,A
+30004,Vax ONEPWR Blade 4,Stick Vacuum Cleaner,Vax,ONEPWR Blade 4,Cleaning Appliances,229.99,10,450,100,Titanium Grey,3.1,23.0,115.0,20.0,220-240,B
+30005,Bosch BCS122GB,Cordless Vacuum Cleaner,Bosch,BCS122GB,Cleaning Appliances,279.99,7,600,220,White,4.6,21.2,122.0,25.5,220-240,A
+30006,Hoover H-FREE 500,Stick Vacuum Cleaner,Hoover,H-FREE 500,Cleaning Appliances,189.99,9,450,100,Pet Blue,2.2,25.0,115.0,23.0,220-240,B
+30007,Rowenta RH9286WO,Air Force Flex 560 Cordless Vacuum Cleaner,Rowenta,RH9286WO,Cleaning Appliances,349.99,4,600,180,Black/Red,3.6,25.2,114.0,25.0,220-240,A
+30008,Numatic Henry HVR160,Canister Vacuum Cleaner,Numatic,HVR160,Cleaning Appliances,159.99,12,620,230,Red,6.9,34.0,37.0,34.0,220-240,A
+30009,AEG CX7-2-45AN,Cordless 2-in-1 Vacuum Cleaner,AEG,CX7-2-45AN,Cleaning Appliances,199.99,8,540,180,Chili Red,4.7,26.0,114.0,15.0,220-240,A
+30010,Karcher VC5,Compact Vacuum Cleaner,Karcher,VC5,Cleaning Appliances,179.99,6,500,200,Yellow,3.6,28.1,63.0,18.6,220-240,B

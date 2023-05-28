@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Power Consumption (W),Color,Weight (kg),Width (cm),Height (cm),Depth (cm),Voltage (V),Output Power (W)
+90001,Sony HT-X8500,Sound System,Sony,HT-X8500,Audio Appliances,349.99,5,120,Black,3.1,89.0,6.4,9.6,220-240,320
+90002,Bose Soundbar 700,Sound System,Bose,Soundbar 700,Audio Appliances,799.99,3,110,Black,4.8,97.8,5.7,10.8,220-240,300
+90003,Sonos Beam,Sound System,Sonos,Beam,Audio Appliances,399.99,7,100,White,2.8,65.1,6.8,10.0,220-240,240
+90004,LG SL8YG,Sound System,LG,SL8YG,Audio Appliances,499.99,4,160,Black,6.4,104.0,5.7,10.5,220-240,440
+90005,JBL Bar 5.1,Sound System,JBL,Bar 5.1,Audio Appliances,699.99,6,150,Black,9.0,114.8,5.8,11.6,220-240,510
+90006,Yamaha YAS-209,Sound System,Yamaha,YAS-209,Audio Appliances,299.99,5,130,Black,2.7,93.0,6.0,10.9,220-240,200
+90007,Samsung HW-Q70T,Sound System,Samsung,HW-Q70T,Audio Appliances,599.99,3,160,Black,8.6,110.0,5.7,11.9,220-240,330
+90008,Denon DHT-S716H,Sound System,Denon,DHT-S716H,Audio Appliances,449.99,4,120,Black,4.5,110.0,7.1,10.5,220-240,350
+90009,Philips Fidelio B97,Sound System,Philips,Fidelio B97,Audio Appliances,899.99,2,180,Black,8.8,113.0,6.9,10.4,220-240,550
+90010,Pioneer SP-SB23W,Sound System,Pioneer,SP-SB23W,Audio Appliances,349.99,5,110,Black,8.2,94.0,8.0,11.4,220-240,260

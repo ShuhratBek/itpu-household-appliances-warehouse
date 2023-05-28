@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Cooling Capacity (BTU),Heating Capacity (BTU),Power Consumption (W),Noise Level (dB),Energy Efficiency Rating,Color,Weight (kg),Height (cm),Width (cm),Depth (cm),Voltage (V)
+49001,Daikin Split Air Conditioner,Air Conditioner,Daikin,FTXG35LW,Kitchen Appliances,799.00,4,12000,13000,1400,40,A+++,White,35.0,78.5,94.0,22.9,230
+49002,Panasonic Inverter Air Conditioner,Air Conditioner,Panasonic,CS-Z35VKR,Kitchen Appliances,899.00,3,12000,13000,1550,38,A+++,Silver,31.0,82.0,107.0,23.5,230
+49003,Mitsubishi Electric Split Air Conditioner,Air Conditioner,Mitsubishi Electric,MSZ-HJ35VA,Kitchen Appliances,749.00,5,12000,13000,1350,42,A+++,Black,29.5,89.0,91.0,22.7,230
+49004,LG Smart Inverter Air Conditioner,Air Conditioner,LG,S18SW2-QW76,Kitchen Appliances,999.00,2,18000,20000,2100,46,A+++,Silver,40.5,92.0,108.0,23.0,230
+49005,Samsung Digital Inverter Air Conditioner,Air Conditioner,Samsung,AR12FSFPAWQNEU,Kitchen Appliances,859.00,3,12000,13000,1500,44,A+++,White,33.5,80.0,88.0,22.5,230
+49006,Toshiba Portable Air Conditioner,Air Conditioner,Toshiba,RAC-PD0811CRU,Kitchen Appliances,599.00,6,8000,9000,950,48,A++,Black,26.0,70.5,39.0,34.0,230
+49007,Haier Split Air Conditioner,Air Conditioner,Haier,HSU-12HNFG5(K),Kitchen Appliances,649.00,4,12000,13000,1200,41,A++,White,32.0,84.0,91.0,22.5,230
+49008,Electrolux Inverter Air Conditioner,Air Conditioner,Electrolux,ES12M3C,Kitchen Appliances,759.00,3,12000,13000,1400,43,A+++,Silver,34.0,85.0,92.0,23.0,230
+49009,Whirlpool Window Air Conditioner,Air Conditioner,Whirlpool,WWF 16B10 GCD,Kitchen Appliances,569.00,5,16000,18000,1750,47,A++,White,37.5,80.0,60.0,19.5,230
+49010,Sharp Inverter Air Conditioner,Air Conditioner,Sharp,AF-Q100PX,Kitchen Appliances,879.00,2,12000,13000,1600,45,A+++,Silver,36.5,82.0,105.0,23.7,230

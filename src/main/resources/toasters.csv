@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Power Consumption (W),Number of Slots,Color,Weight (kg),Width (cm),Height (cm),Depth (cm),Voltage (V),Energy Efficiency Rating
+20001,Philips HD2581,Toaster,Philips,HD2581,Kitchen Appliances,29.99,10,800,2,White,1.2,26.5,18.8,16.0,220-240,A
+20002,Breville VTT233,Toaster,Breville,VTT233,Kitchen Appliances,39.99,8,950,4,Black,1.7,29.0,19.0,20.0,220-240,B
+20003,Morphy Richards 220023,Toaster,Morphy Richards,220023,Kitchen Appliances,34.99,5,850,2,Silver,1.4,27.5,19.7,16.5,220-240,A
+20004,Tefal TT330D,Toaster,Tefal,TT330D,Kitchen Appliances,42.99,6,1100,4,Stainless Steel,1.8,31.0,20.0,21.0,220-240,B
+20005,Kenwood TTP210,Toaster,Kenwood,TTP210,Kitchen Appliances,24.99,12,800,2,White,1.0,25.0,15.5,16.0,220-240,A
+20006,Russell Hobbs 18780,Toaster,Russell Hobbs,18780,Kitchen Appliances,31.99,7,850,4,Black,1.6,29.5,19.0,18.0,220-240,A
+20007,Smeg TSF01PBUK,Toaster,Smeg,TSF01PBUK,Kitchen Appliances,129.99,3,950,2,Blue,2.4,31.0,20.8,19.5,220-240,B
+20008,Dualit 27450,Toaster,Dualit,27450,Kitchen Appliances,199.99,2,1200,4,Chrome,4.3,35.0,21.0,22.0,220-240,C
+20009,KitchenAid 5KMT2116,Toaster,KitchenAid,5KMT2116,Kitchen Appliances,129.99,4,1100,2,Red,2.6,31.5,19.0,22.0,220-240,B
+20010,De'Longhi CTOV2103,Toaster,De'Longhi,CTOV2103,Kitchen Appliances,44.99,6,900,2,Cream,1.3,28.5,20.0,22.0,220-240,A

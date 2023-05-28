@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Voltage (V),Battery Life (Days),Brushing Modes,Color,Weight (g),Height (cm),Width (cm),Depth (cm)
+51001,Oral-B Pro 2000,Electric Toothbrush,Oral-B,Pro 2000,Personal Care,49.99,10,220,14,2,White,150,23.5,2.5,3.0
+51002,Philips Sonicare ProtectiveClean 6100,Electric Toothbrush,Philips,Sonicare ProtectiveClean 6100,Personal Care,89.99,6,220,21,3,Black,200,24.0,3.5,3.5
+51003,Colgate ProClinical 150,Electric Toothbrush,Colgate,ProClinical 150,Personal Care,39.99,8,220,10,1,Blue,170,22.0,2.8,3.2
+51004,Oral-B Genius X Luxe Edition,Electric Toothbrush,Oral-B,Genius X Luxe Edition,Personal Care,149.99,4,220,28,6,Rose Gold,180,25.0,3.0,3.5
+51005,Philips Sonicare DiamondClean Smart 9700,Electric Toothbrush,Philips,Sonicare DiamondClean Smart 9700,Personal Care,199.99,2,220,30,5,White,190,23.8,3.2,3.2
+51006,Colgate ProClinical 250+,Electric Toothbrush,Colgate,ProClinical 250+,Personal Care,29.99,12,220,7,1,White,160,22.5,2.5,3.0
+51007,Oral-B Vitality Plus CrossAction,Electric Toothbrush,Oral-B,Vitality Plus CrossAction,Personal Care,24.99,15,220,5,1,Blue,140,21.0,2.2,2.8
+51008,Philips Sonicare Essence,Electric Toothbrush,Philips,Sonicare Essence,Personal Care,34.99,10,220,10,1,White,150,23.0,2.5,3.0
+51009,Colgate ProClinical 350 Whitening,Electric Toothbrush,Colgate,ProClinical 350 Whitening,Personal Care,39.99,8,220,14,2,White,170,22.5,2.8,3.2
+51010,Oral-B Smart 6 6000N,Electric Toothbrush,Oral-B,Smart 6 6000N,Personal Care,79.99,6,220,21,5,Black,190,24.0,3.5,3.5

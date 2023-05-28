@@ -12,7 +12,6 @@ ID,Name,Category,Price,Quantity
 1011,Blender,Kitchen Appliances,59.99,20
 1012,Coffee Maker,Kitchen Appliances,79.99,10
 1013,Toaster,Kitchen Appliances,39.99,15
-1014,Food Processor,Kitchen Appliances,129.99,8
 1015,Dryer,Laundry Appliances,499.99,12
 1016,Iron,Laundry Appliances,39.99,20
 1017,Clothes Steamer,Laundry Appliances,59.99,15
@@ -31,14 +30,3 @@ ID,Name,Category,Price,Quantity
 1030,Sewing Machine,Miscellaneous Appliances,149.99,10
 1031,Electric Can Opener,Miscellaneous Appliances,19.99,20
 1032,Electric Kettle,Miscellaneous Appliances,29.99,15
-1033,Refrigerator,Kitchen Appliances,999.99,10
-1034,Washing Machine,Laundry Appliances,599.99,5
-1035,Vacuum Cleaner,Cleaning Appliances,149.99,8
-1036,Air Conditioner,Heating/Cooling Appliances,399.99,12
-1037,Television,Entertainment Appliances,699.99,15
-1038,Hair Dryer,Personal Care Appliances,49.99,20
-1039,Water Purifier,Miscellaneous Appliances,129.99,6
-1040,Oven and Stove,Kitchen Appliances,799.99,10
-1041,Dishwasher,Kitchen Appliances,499.99,8
-1042,Microwave,Kitchen Appliances,149.99,15
-1043,Blender,Kitchen Appliances,59.99,20

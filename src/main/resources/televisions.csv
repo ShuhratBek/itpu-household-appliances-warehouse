@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Screen Size (inches),Resolution,Smart TV,Color,Weight (kg),Width (cm),Height (cm),Depth (cm),Voltage (V),Energy Efficiency Rating
+10001,Samsung UE55TU8502UXXH,Television,Samsung,UE55TU8502UXXH,Electronics,699.99,5,55,4K Ultra HD,Yes,Black,17.5,123.0,78.6,25.2,220-240,A
+10002,LG OLED55CX6LA,Television,LG,OLED55CX6LA,Electronics,1699.99,3,55,4K Ultra HD,Yes,Black,25.0,122.8,71.7,4.69,220-240,A+
+10003,Sony KD-65A8,Television,Sony,KD-65A8,Electronics,2499.99,2,65,4K Ultra HD,Yes,Black,30.2,144.7,83.2,5.2,220-240,A+
+10004,Philips 58PUS7855/12,Television,Philips,58PUS7855/12,Electronics,799.99,4,58,4K Ultra HD,Yes,Silver,19.8,130.1,75.4,9.3,220-240,A
+10005,TCL 50C715,Television,TCL,50C715,Electronics,549.99,6,50,4K Ultra HD,Yes,Black,14.5,112.8,65.1,7.7,220-240,A+
+10006,Panasonic TX-40JXW804,Television,Panasonic,TX-40JXW804,Electronics,499.99,7,40,4K Ultra HD,Yes,Silver,9.5,90.0,51.8,4.4,220-240,A
+10007,Hisense 43A7500F,Television,Hisense,43A7500F,Electronics,399.99,8,43,4K Ultra HD,Yes,Black,8.5,97.0,61.0,19.1,220-240,A+
+10008,Sharp 32BC6E,Television,Sharp,32BC6E,Electronics,219.99,10,32,Full HD,No,Black,4.2,73.5,44.1,8.4,220-240,A
+10009,Grundig 55GOB8899,Television,Grundig,55GOB8899,Electronics,799.99,3,55,4K Ultra HD,Yes,Black,19.7,122.8,77.4,6.6,220-240,A
+10010,Pioneer KRP-500ABG,Television,Pioneer,KRP-500ABG,Electronics,2499.99,2,50,Full HD,No,Black,22.5,124.0,77.2,15.2,220-240,A

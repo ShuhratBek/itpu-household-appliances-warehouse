@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Power Consumption (W),Color,Weight (kg),Width (cm),Height (cm),Depth (cm),Voltage (V),Water Tank Capacity (L)
+91001,Kärcher SC 5 EasyFix,Steam Cleaner,Kärcher,SC 5 EasyFix,Cleaning Appliances,399.99,3,2200,Yellow,6.0,30.5,43.0,38.0,220-240,1.5
+91002,Polti Vaporetto Pro 85_Flexi,Steam Cleaner,Polti,Vaporetto Pro 85_Flexi,Cleaning Appliances,449.99,2,2300,Red,7.5,32.0,46.0,38.0,220-240,1.8
+91003,Rowenta Clean & Steam Multi,Steam Cleaner,Rowenta,Clean & Steam Multi,Cleaning Appliances,299.99,5,1700,White,5.6,26.0,116.0,35.0,220-240,1.0
+91004,Shark S6003EU,Steam Cleaner,Shark,S6003EU,Cleaning Appliances,349.99,4,1600,Blue,4.8,38.0,120.0,40.0,220-240,1.2
+91005,Polti Vaporetto Smart 35_Mop,Steam Cleaner,Polti,Vaporetto Smart 35_Mop,Cleaning Appliances,249.99,6,1500,Green,4.0,25.0,110.0,34.0,220-240,1.2
+91006,Kärcher SC 3 Upright EasyFix,Steam Cleaner,Kärcher,SC 3 Upright EasyFix,Cleaning Appliances,249.99,7,1900,Yellow,3.9,26.5,71.0,32.5,220-240,0.5
+91007,Vax S85-CM Steam Clean Multi,Steam Cleaner,Vax,S85-CM Steam Clean Multi,Cleaning Appliances,199.99,8,1400,White,5.2,30.0,110.0,34.0,220-240,1.0
+91008,Philips Steam & Go Plus,Steam Cleaner,Philips,Steam & Go Plus,Cleaning Appliances,129.99,10,1300,Purple,1.6,15.5,37.0,11.0,220-240,0.2
+91009,Morphy Richards 720026,Steam Cleaner,Morphy Richards,720026,Cleaning Appliances,179.99,5,1600,Black,4.3,33.0,118.0,30.0,220-240,1.0
+91010,Polti Vaporella Forever 630_Pro,Steam Cleaner,Polti,Vaporella Forever 630_Pro,Cleaning Appliances,289.99,3,2000,Blue,5.8,28.0,105.0,35.0,220-240,1.5

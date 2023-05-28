@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Power Consumption (W),Noise Level (dB),Number of Speeds,Color,Weight (kg),Height (cm),Width (cm),Depth (cm),Voltage (V)
+71001,Rowenta Turbo Silence,Fan,Rowenta,Turbo Silence,Home Appliances,79.99,10,45,40,4,White,3.2,70,40,20,220-240
+71002,Dyson Cool AM07,Fan,Dyson,Cool AM07,Home Appliances,299.99,5,65,60,10,Silver,4.5,100,30,30,220-240
+71003,Philips Viva Collection,Fan,Philips,Viva Collection,Home Appliances,59.99,8,55,50,3,Black,2.8,80,35,25,220-240
+71004,Tristar VE-5953,Fan,Tristar,VE-5953,Home Appliances,39.99,12,60,55,3,Chrome,3.0,90,45,20,220-240
+71005,Honeywell HT-900E,Fan,Honeywell,HT-900E,Home Appliances,29.99,15,35,35,2,Black,1.5,50,25,15,220-240
+71006,Rowenta Fresh Compact,Fan,Rowenta,Fresh Compact,Home Appliances,69.99,6,50,45,5,Blue,3.0,75,40,18,220-240
+71007,Pro Breeze Mini,Fan,Pro Breeze,Mini,Home Appliances,19.99,20,20,25,2,White,0.8,30,15,15,220-240
+71008,Arctic Desk Fan,Fan,Arctic,Desk Fan,Home Appliances,24.99,18,30,35,3,Black,1.2,45,20,20,220-240
+71009,Taurus Alpatec Babel RC,Fan,Taurus,Alpatec Babel RC,Home Appliances,89.99,7,55,50,4,Silver,4.0,90,40,20,220-240
+71010,Bionaire Tower Fan,Fan,Bionaire,Tower Fan,Home Appliances,79.99,9,50,45,3,White,3.5,85,30,25,220-240

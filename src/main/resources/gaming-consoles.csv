@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Storage Capacity (GB),Color,Weight (kg),Width (cm),Height (cm),Depth (cm),Voltage (V)
+81001,Sony PlayStation 5,Console,Sony,PlayStation 5,Gaming,499.99,10,825,White,4.5,39,10,26,220-240
+81002,Microsoft Xbox Series X,Console,Microsoft,Xbox Series X,Gaming,499.99,8,1,Black,4.4,30,15,30,220-240
+81003,Nintendo Switch,Console,Nintendo,Switch,Gaming,299.99,15,32,Gray,0.3,10,10,2,220-240
+81004,Sony PlayStation 4 Pro,Console,Sony,PlayStation 4 Pro,Gaming,399.99,5,1000,Black,3.3,29,6,26,220-240
+81005,Microsoft Xbox One X,Console,Microsoft,Xbox One X,Gaming,399.99,6,1,Black,4.2,30,6,25,220-240
+81006,Nintendo Switch Lite,Console,Nintendo,Switch Lite,Gaming,199.99,12,32,Yellow,0.3,9,8,2,220-240
+81007,Sony PlayStation 4 Slim,Console,Sony,PlayStation 4 Slim,Gaming,299.99,9,500,Black,2.8,28,5,26,220-240
+81008,Microsoft Xbox One S,Console,Microsoft,Xbox One S,Gaming,299.99,7,1,White,2.9,30,6,24,220-240
+81009,Nintendo Wii U,Console,Nintendo,Wii U,Gaming,249.99,4,32,Black,2.7,17,5,26,220-240
+81010,Sony PlayStation 3,Console,Sony,PlayStation 3,Gaming,199.99,3,500,Black,3.0,32,6,27,220-240

@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Filter Type,Capacity (Liters),Color,Weight (kg),Width (cm),Height (cm),Depth (cm),Voltage (V),Energy Efficiency Rating
+40001,Philips WP3822/00,Countertop Water Purifier,Philips,WP3822/00,Appliances,99.99,10,Activated Carbon,2.5,White,2.1,24.2,36,13.5,220-240,A
+40002,Brita Marella XL,Water Filter Jug,Brita,Marella XL,Appliances,29.99,20,Activated Carbon,3.5,White,1.8,26.5,28.5,10.4,N/A,N/A
+40003,Aquasana AQ-4000W,Under Sink Water Filter,Aquasana,AQ-4000W,Appliances,159.99,5,Activated Carbon,4,White,3.2,30,29,11.4,220-240,A+
+40004,Coway P-07Q,Countertop Water Purifier,Coway,P-07Q,Appliances,129.99,8,Reverse Osmosis,2.8,Silver,4.6,32,37.8,14.2,220-240,A++
+40005,AEG RO-F9-2,Built-in Water Purifier,AEG,RO-F9-2,Appliances,399.99,3,Reverse Osmosis,5.7,Stainless Steel,8.3,26,49.5,22.5,220-240,A++
+40006,KitchenAid KSC6212,Water Filter Pitcher,KitchenAid,KSC6212,Appliances,49.99,15,Activated Carbon,2.4,Black,1.1,26.2,25.1,11.7,N/A,N/A
+40007,Honeywell HWP-505,Tabletop Water Purifier,Honeywell,HWP-505,Appliances,79.99,12,Activated Carbon,3.2,White,1.9,21.5,35,11,220-240,A
+40008,Bosch Filtrino II,Thermal Water Filter,Bosch,Filtrino II,Appliances,89.99,10,Activated Carbon,2,Black,1.5,15.5,29,24,220-240,A
+40009,Samsung DW80R2031US,Built-in Water Purifier,Samsung,DW80R2031US,Appliances,299.99,6,Reverse Osmosis,4.3,Stainless Steel,6.1,33.8,51.2,25.8,220-240,A+
+40010,Whirlpool WHEEDF,Under Sink Water Filter,Whirlpool,WHEEDF,Appliances,129.99,8,Activated Carbon,3.8,White,3.5,32.4,24.9,9.9,220-240,A++

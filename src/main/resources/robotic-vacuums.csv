@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Power Consumption (W),Color,Weight (kg),Width (cm),Height (cm),Depth (cm),Voltage (V),Battery Life (min)
+89001,iRobot Roomba 980,Robotic Vacuum,iRobot,Roomba 980,Cleaning Appliances,699.99,5,40,Black,4.0,35.3,9.1,35.1,220-240,120
+89002,Xiaomi Mi Robot Vacuum,Robotic Vacuum,Xiaomi,Mi Robot Vacuum,Cleaning Appliances,299.99,8,35,White,3.8,34.5,9.6,34.5,220-240,150
+89003,Neato Botvac D7,Robotic Vacuum,Neato,Botvac D7,Cleaning Appliances,499.99,3,38,Black,3.4,33.6,10.2,31.9,220-240,120
+89004,Ecovacs Deebot N8 Pro+,Robotic Vacuum,Ecovacs,Deebot N8 Pro+,Cleaning Appliances,549.99,4,42,Black,3.7,35.3,9.2,35.3,220-240,110
+89005,Shark IQ Robot XL,Robotic Vacuum,Shark,IQ Robot XL,Cleaning Appliances,449.99,6,40,Black,3.8,34.3,9.5,34.3,220-240,100
+89006,Proscenic M7 Pro,Robotic Vacuum,Proscenic,M7 Pro,Cleaning Appliances,399.99,7,38,Black,3.5,34.5,9.8,34.5,220-240,120
+89007,Eufy RoboVac G30,Robotic Vacuum,Eufy,RoboVac G30,Cleaning Appliances,319.99,5,35,White,3.6,32.5,7.2,32.5,220-240,110
+89008,Samsung POWERbot R7070,Robotic Vacuum,Samsung,POWERbot R7070,Cleaning Appliances,399.99,4,40,Black,4.5,35.0,9.6,35.0,220-240,90
+89009,LG Hom-Bot Turbo+,Robotic Vacuum,LG,Hom-Bot Turbo+,Cleaning Appliances,449.99,3,39,Black,4.2,34.0,9.6,34.0,220-240,120
+89010,ILIFE A9s,Robotic Vacuum,ILIFE,A9s,Cleaning Appliances,299.99,6,37,Champagne,3.6,33.0,8.0,33.0,220-240,120

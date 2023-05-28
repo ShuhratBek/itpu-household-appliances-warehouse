@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Power Consumption (W),Color,Weight (kg),Width (cm),Height (cm),Depth (cm),Voltage (V)
+83001,De'Longhi Oil-Filled Radiator Heater,Heater,De'Longhi,Dragon 4 TRD40820,Home Appliances,99.99,10,2000,White,10,60,65,15,220-240
+83002,Rowenta Silent Comfort Heater,Heater,Rowenta,Silent Comfort SO5115,Home Appliances,79.99,12,2400,Black,8,50,70,20,220-240
+83003,Dyson Hot + Cool Jet Focus Heater,Heater,Dyson,Hot + Cool HP02,Home Appliances,299.99,5,1500,Silver,5,30,60,10,220-240
+83004,Electrolux Portable Ceramic Heater,Heater,Electrolux,Ceramic Heater ECH2-2000T,Home Appliances,69.99,8,2000,Black,7,40,55,18,220-240
+83005,Stadler Form Anna Ceramic Heater,Heater,Stadler Form,Anna Little A-030,Home Appliances,89.99,6,1200,White,4,25,40,12,220-240
+83006,Honeywell HZ-445R Oscillating Ceramic Heater,Heater,Honeywell,HZ-445R,Home Appliances,49.99,15,1500,Red,3,20,35,10,220-240
+83007,Trotec TCH 1 E Ceramic Tower Heater,Heater,Trotec,TCH 1 E,Home Appliances,59.99,10,1800,Black,6,35,50,15,220-240
+83008,Orbegozo FH 5008 Electric Heater,Heater,Orbegozo,FH 5008,Home Appliances,39.99,20,2000,Gray,9,55,60,18,220-240
+83009,Tristar KA-5911 Electric Convector Heater,Heater,Tristar,KA-5911,Home Appliances,34.99,18,2000,White,8,50,65,15,220-240
+83010,Vornado MVH Vortex Heater,Heater,Vornado,MVH,Home Appliances,49.99,12,1500,Black,4,30,45,10,220-240

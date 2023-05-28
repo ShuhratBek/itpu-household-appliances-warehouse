@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Power Consumption (W),Color,Weight (kg),Width (cm),Height (cm),Depth (cm),Voltage (V)
+82001,Philips SalonDry Hair Dryer,Dryer,Philips,SalonDry HD5000,Personal Care,39.99,15,1800,Black,0.5,20,10,15,220-240
+82002,BaByliss Pro Nano Titanium Hair Dryer,Dryer,BaByliss Pro,Nano Titanium,Personal Care,79.99,8,2000,Red,0.6,22,11,16,220-240
+82003,Remington D3010 Power Dry Hair Dryer,Dryer,Remington,D3010,Personal Care,29.99,12,1875,White,0.4,18,9,14,220-240
+82004,Rowenta Studio Dry Hair Dryer,Dryer,Rowenta,Studio Dry CV5422,Personal Care,49.99,10,2200,Black,0.7,24,12,17,220-240
+82005,Revlon One-Step Hair Dryer and Volumizer,Dryer,Revlon,One-Step RVDR5222,Personal Care,59.99,6,1100,Black,0.8,26,13,18,220-240
+82006,Remington Pro Hair Dryer with Thermaluxe,Dryer,Remington,Thermaluxe AC9140,Personal Care,69.99,9,2400,Gray,0.6,21,10,15,220-240
+82007,BaByliss 3Q Professional Hair Dryer,Dryer,BaByliss,3Q BAB890E,Personal Care,89.99,4,2200,Black,0.5,20,11,16,220-240
+82008,GHD Air Hair Dryer,Dryer,GHD,Air,Personal Care,129.99,3,2100,Black,0.7,23,12,17,220-240
+82009,Remington Silk Hair Dryer,Dryer,Remington,Silk AC9096,Personal Care,54.99,5,2400,Purple,0.6,22,11,16,220-240
+82010,Philips Essential Care Hair Dryer,Dryer,Philips,Essential Care BHD004,Personal Care,34.99,7,1800,White,0.5,20,10,15,220-240

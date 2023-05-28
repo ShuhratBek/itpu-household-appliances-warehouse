@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Power Consumption (W),Color,Weight (kg),Width (cm),Height (cm),Depth (cm),Voltage (V),Energy Efficiency
+88001,Bosch Refrigerator,Refrigerator,Bosch,KGN39VLEA,Kitchen Appliances,849.99,5,150,Stainless Steel,78,60,203,66,220-240,A++
+88002,Samsung Refrigerator,Refrigerator,Samsung,RS68N8230B1,Kitchen Appliances,1199.99,3,180,Black,95,91.2,178,71.6,220-240,A+++
+88003,Whirlpool Refrigerator,Refrigerator,Whirlpool,WRF555SDFZ,Kitchen Appliances,999.99,4,160,Stainless Steel,88,90.8,178,73.7,220-240,A+
+88004,LG Refrigerator,Refrigerator,LG,GBB72PZJZN,Kitchen Appliances,1099.99,3,170,Stainless Steel,84,91.2,179,73.8,220-240,A++
+88005,Indesit Refrigerator,Refrigerator,Indesit,LR8 S1 S,QA,Kitchen Appliances,699.99,5,140,Silver,60,59.5,167,64.5,220-240,A+
+88006,AEG Refrigerator,Refrigerator,AEG,RKB638E2DW,Kitchen Appliances,999.99,4,160,White,70,59.5,201,65,220-240,A++
+88007,Hotpoint Refrigerator,Refrigerator,Hotpoint,XEX95T1IWZ,Kitchen Appliances,799.99,3,150,White,65,59.5,201,66.5,220-240,A++
+88008,Hisense Refrigerator,Refrigerator,Hisense,RS694N4TD1,Kitchen Appliances,849.99,4,155,Stainless Steel,75,91,178,64,220-240,A++
+88009,Smeg Refrigerator,Refrigerator,Smeg,FAB30RBL3,Kitchen Appliances,1299.99,2,200,Black,92,60,168,67,220-240,A+++
+88010,Zanussi Refrigerator,Refrigerator,Zanussi,ZRA33103WA,Kitchen Appliances,599.99,5,145,White,60,59.5,155,66,220-240,A+

@@ -1,0 +1,11 @@
+ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Capacity (kg),Spin Speed (RPM),Color,Weight (kg),Width (cm),Height (cm),Depth (cm),Voltage (V),Energy Efficiency Rating
+40001,Bosch WAN28281GB,Freestanding Front Load Washing Machine,Bosch,WAN28281GB,Appliances,549.99,5,8,1400,White,68,59.8,84.8,55,220-240,A+++
+40002,Samsung WW90TA046TE,Freestanding Front Load Washing Machine,Samsung,WW90TA046TE,Appliances,449.99,7,9,1400,Titanium,Grey,61,59.8,85,55,220-240,A+++
+40003,AEG L6FBI842N,Freestanding Front Load Washing Machine,AEG,L6FBI842N,Appliances,549.99,6,8,1400,White,66,59.6,84.7,57.5,220-240,A+++
+40004,Hotpoint NSWM1043CW,Freestanding Front Load Washing Machine,Hotpoint,NSWM1043CW,Appliances,379.99,8,10,1400,White,71,59.5,85,54,220-240,A++
+40005,Indesit BWE91484XK,Freestanding Front Load Washing Machine,Indesit,BWE91484XK,Appliances,399.99,5,9,1400,Black,72,59.5,85,54,220-240,A++
+40006,LG F4V309WNE,Freestanding Front Load Washing Machine,LG,F4V309WNE,Appliances,599.99,4,9,1400,White,68,60,85,56,220-240,A+++
+40007,Zanussi ZWF91483W,Freestanding Front Load Washing Machine,Zanussi,ZWF91483W,Appliances,429.99,7,9,1400,White,74,60,85,55,220-240,A+++
+40008,Haier HW70-1479,Freestanding Front Load Washing Machine,Haier,HW70-1479,Appliances,319.99,9,7,1400,White,63,59.5,84.5,49.7,220-240,A++
+40009,Whirlpool FWD91496W,Freestanding Front Load Washing Machine,Whirlpool,FWD91496W,Appliances,499.99,6,9,1400,White,66,59.5,84.5,61,220-240,A+++
+40010,Beko WTK82041W,Freestanding Top Load Washing Machine,Beko,WTK82041W,Appliances,359.99,5,8,1200,White,53,60,88,54,220-240,A++
