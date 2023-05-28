@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/ShuhratBek/itpu-household-appliances-warehouse/compare/v1.1.0...v1.1.1) (2023-05-28)
+
+
+### Bug Fixes
+
+* **entities:** add missed toString() method to Entity classes and update abstraction ([f62ae05](https://github.com/ShuhratBek/itpu-household-appliances-warehouse/commit/f62ae05a1fddd8d5b6de6e3ffb962a2bc5130bf9))
+
 ## [1.1.0](https://github.com/ShuhratBek/itpu-household-appliances-warehouse/compare/v1.0.0...v1.1.0) (2023-05-28)
 
 
