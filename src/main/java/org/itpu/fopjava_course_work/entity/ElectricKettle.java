@@ -57,4 +57,8 @@ public class ElectricKettle extends Appliance<ElectricKettle> implements Materia
         this.powerConsumption = powerConsumption;
         return this;
     }
+    @Override
+    public String toString() {
+        return "ElectricKettle{" + String.join(", ", commonFields(), "capacity=" + capacity, "material=" + material, "powerConsumption=" + powerConsumption) + "}";
+    }
 }

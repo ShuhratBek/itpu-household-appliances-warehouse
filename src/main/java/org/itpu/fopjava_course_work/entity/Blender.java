@@ -54,4 +54,9 @@ public class Blender extends Appliance<Blender> implements PowerConsumable<Blend
         this.capacity = capacity;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "Blender{" + String.join(", ", commonFields(), "powerConsumption=" + powerConsumption, "speedSettings=" + speedSettings, "capacity=" + capacity) + "}";
+    }
 }

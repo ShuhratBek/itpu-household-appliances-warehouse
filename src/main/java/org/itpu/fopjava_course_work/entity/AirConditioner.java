@@ -2,11 +2,11 @@ package org.itpu.fopjava_course_work.entity;
 
 public class AirConditioner extends Appliance<AirConditioner> implements CoolingCapable<AirConditioner>, HeatingCapable<AirConditioner>, PowerConsumable<AirConditioner>, NoiseLevelAware<AirConditioner>, EnergyEfficiencyRatable<AirConditioner> {
 
-    int coolingCapacity;
-    int heatingCapacity;
-    int powerConsumption;
-    int noiseLevel;
-    String energyEfficiencyRating;
+    private int coolingCapacity;
+    private int heatingCapacity;
+    private int powerConsumption;
+    private int noiseLevel;
+    private String energyEfficiencyRating;
 
     /**
      * @return
@@ -16,6 +16,7 @@ public class AirConditioner extends Appliance<AirConditioner> implements Cooling
         return coolingCapacity;
     }
 
+    @Override
     public AirConditioner setCoolingCapacity(int coolingCapacity) {
         this.coolingCapacity = coolingCapacity;
         return this;
@@ -29,6 +30,7 @@ public class AirConditioner extends Appliance<AirConditioner> implements Cooling
         return heatingCapacity;
     }
 
+    @Override
     public AirConditioner setHeatingCapacity(int heatingCapacity) {
         this.heatingCapacity = heatingCapacity;
         return this;
@@ -42,6 +44,7 @@ public class AirConditioner extends Appliance<AirConditioner> implements Cooling
         return powerConsumption;
     }
 
+    @Override
     public AirConditioner setPowerConsumption(int powerConsumption) {
         this.powerConsumption = powerConsumption;
         return this;
@@ -55,6 +58,7 @@ public class AirConditioner extends Appliance<AirConditioner> implements Cooling
         return noiseLevel;
     }
 
+    @Override
     public AirConditioner setNoiseLevel(int noiseLevel) {
         this.noiseLevel = noiseLevel;
         return this;
@@ -68,8 +72,14 @@ public class AirConditioner extends Appliance<AirConditioner> implements Cooling
         return energyEfficiencyRating;
     }
 
+    @Override
     public AirConditioner setEnergyEfficiencyRating(String energyEfficiencyRating) {
         this.energyEfficiencyRating = energyEfficiencyRating;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "AirConditioner{" + String.join(", ", commonFields(), "coolingCapacity=" + coolingCapacity, "heatingCapacity=" + heatingCapacity, "powerConsumption=" + powerConsumption, "noiseLevel=" + noiseLevel, "energyEfficiencyRating=" + energyEfficiencyRating) + "}";
     }
 }

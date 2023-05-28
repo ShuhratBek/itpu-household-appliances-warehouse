@@ -38,4 +38,9 @@ public class CoffeeMaker extends Appliance<CoffeeMaker> implements CapacityOfCup
         this.capacity = capacity;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "CoffeeMaker{" + String.join(", ", commonFields(), "powerConsumption=" + powerConsumption, "capacity=" + capacity) + "}";
+    }
 }

@@ -58,4 +58,9 @@ public class ClothesSteamer extends Appliance<ClothesSteamer> implements PowerCo
         this.steamTime = steamTime;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "ClothesSteamer{" + String.join(", ", commonFields(), "powerConsumption=" + powerConsumption, "waterTankCapacity=" + waterTankCapacity, "steamTime=" + steamTime) + "}";
+    }
 }

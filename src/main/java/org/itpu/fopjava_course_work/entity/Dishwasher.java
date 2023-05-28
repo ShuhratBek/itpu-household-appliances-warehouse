@@ -57,4 +57,8 @@ public class Dishwasher extends Appliance<Dishwasher> implements PlaceSettingPro
         this.washingPrograms = washingPrograms;
         return this;
     }
+    @Override
+    public String toString() {
+        return "Dishwasher{" + String.join(", ", commonFields(), "energyEfficiencyRating=" + energyEfficiencyRating, "placeSettings=" + placeSettings, "washingPrograms=" + washingPrograms) + "}";
+    }
 }

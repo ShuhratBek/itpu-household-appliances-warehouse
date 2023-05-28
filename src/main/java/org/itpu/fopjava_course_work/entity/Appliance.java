@@ -1,4 +1,5 @@
 package org.itpu.fopjava_course_work.entity;
+
 import java.util.Objects;
 
 @SuppressWarnings("unchecked")
@@ -89,6 +90,7 @@ public abstract class Appliance<SELF extends Appliance<SELF>> {
         this.weight = weight;
         return (SELF) this;
     }
+
     public double getHeight() {
         return height;
     }
@@ -97,6 +99,7 @@ public abstract class Appliance<SELF extends Appliance<SELF>> {
         this.height = height;
         return (SELF) this;
     }
+
     public double getWidth() {
         return width;
     }
@@ -105,6 +108,7 @@ public abstract class Appliance<SELF extends Appliance<SELF>> {
         this.width = width;
         return (SELF) this;
     }
+
     public double getDepth() {
         return depth;
     }
@@ -113,6 +117,7 @@ public abstract class Appliance<SELF extends Appliance<SELF>> {
         this.depth = depth;
         return (SELF) this;
     }
+
     public int getQuantity() {
         return quantity;
     }
@@ -146,13 +151,24 @@ public abstract class Appliance<SELF extends Appliance<SELF>> {
     }
 
     protected String commonFields() {
-        return "price=" + price + ", weight=" + weight;
-
+        return "id=" + id +
+                ", name=" + name +
+                ", brand=" + brand +
+                ", modelName=" + modelName +
+                ", category=" + category +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", color=" + color +
+                ", weight=" + weight +
+                ", height=" + height +
+                ", width=" + width +
+                ", depth=" + depth +
+                ", voltage=" + voltage;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(price, weight);
+        return Objects.hash(id, name, type, brand, modelName, category, price, quantity, color, weight, height, width, depth, voltage);
     }
 
     @Override
@@ -163,8 +179,21 @@ public abstract class Appliance<SELF extends Appliance<SELF>> {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Appliance other = (Appliance) obj;
-        return price == other.price && Double.doubleToLongBits(weight) == Double.doubleToLongBits(other.weight);
+        Appliance<?> other = (Appliance<?>) obj;
+        return id == other.id &&
+                Objects.equals(name, other.name) &&
+                Objects.equals(type, other.type) &&
+                Objects.equals(brand, other.brand) &&
+                Objects.equals(modelName, other.modelName) &&
+                Objects.equals(category, other.category) &&
+                Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price) &&
+                quantity == other.quantity &&
+                Objects.equals(color, other.color) &&
+                Double.doubleToLongBits(weight) == Double.doubleToLongBits(other.weight) &&
+                Double.doubleToLongBits(height) == Double.doubleToLongBits(other.height) &&
+                Double.doubleToLongBits(width) == Double.doubleToLongBits(other.width) &&
+                Double.doubleToLongBits(depth) == Double.doubleToLongBits(other.depth) &&
+                Objects.equals(voltage, other.voltage);
     }
 
 }

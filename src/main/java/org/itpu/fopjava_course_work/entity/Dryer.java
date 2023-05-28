@@ -77,4 +77,8 @@ public class Dryer extends Appliance<Dryer> implements CapacityAware<Dryer>, Pow
         this.powerConsumption = powerConsumption;
         return this;
     }
+    @Override
+    public String toString() {
+        return "Dryer{" + String.join(", ", commonFields(), "material=" + material, "boilTime=" + boilTime, "powerConsumption=" + powerConsumption, "capacity=" + capacity) + "}";
+    }
 }
