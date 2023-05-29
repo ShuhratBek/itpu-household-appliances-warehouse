@@ -10,7 +10,7 @@ public abstract class Appliance<SELF extends Appliance<SELF>> {
     protected String brand;
     protected String modelName;
     protected String category;
-    protected double price;
+    protected long price;
     protected double weight;
     protected double height;
     protected double width;
@@ -73,11 +73,11 @@ public abstract class Appliance<SELF extends Appliance<SELF>> {
         return (SELF) this;
     }
 
-    public double getPrice() {
+    public long getPrice() {
         return price;
     }
 
-    public SELF setPrice(double price) {
+    public SELF setPrice(long price) {
         this.price = price;
         return (SELF) this;
     }
@@ -147,11 +147,7 @@ public abstract class Appliance<SELF extends Appliance<SELF>> {
 
     @Override
     public String toString() {
-        return "Appliance{" + commonFields() + '}';
-    }
-
-    protected String commonFields() {
-        return "id=" + id +
+        return "Appliance [id=" + id +
                 ", name=" + name +
                 ", brand=" + brand +
                 ", modelName=" + modelName +
@@ -163,7 +159,7 @@ public abstract class Appliance<SELF extends Appliance<SELF>> {
                 ", height=" + height +
                 ", width=" + width +
                 ", depth=" + depth +
-                ", voltage=" + voltage;
+                ", voltage=" + voltage + ']';
     }
 
     @Override
@@ -180,20 +176,20 @@ public abstract class Appliance<SELF extends Appliance<SELF>> {
         if (getClass() != obj.getClass())
             return false;
         Appliance<?> other = (Appliance<?>) obj;
-        return id == other.id &&
-                Objects.equals(name, other.name) &&
-                Objects.equals(type, other.type) &&
-                Objects.equals(brand, other.brand) &&
-                Objects.equals(modelName, other.modelName) &&
-                Objects.equals(category, other.category) &&
-                Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price) &&
-                quantity == other.quantity &&
-                Objects.equals(color, other.color) &&
-                Double.doubleToLongBits(weight) == Double.doubleToLongBits(other.weight) &&
-                Double.doubleToLongBits(height) == Double.doubleToLongBits(other.height) &&
-                Double.doubleToLongBits(width) == Double.doubleToLongBits(other.width) &&
-                Double.doubleToLongBits(depth) == Double.doubleToLongBits(other.depth) &&
-                Objects.equals(voltage, other.voltage);
+        return id == other.id
+                && Objects.equals(name, other.name)
+                && Objects.equals(type, other.type)
+                && Objects.equals(brand, other.brand)
+                && Objects.equals(modelName, other.modelName)
+                && Objects.equals(category, other.category)
+                && Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price)
+                && quantity == other.quantity
+                && Objects.equals(color, other.color)
+                && Double.doubleToLongBits(weight) == Double.doubleToLongBits(other.weight)
+                && Double.doubleToLongBits(height) == Double.doubleToLongBits(other.height)
+                && Double.doubleToLongBits(width) == Double.doubleToLongBits(other.width)
+                && Double.doubleToLongBits(depth) == Double.doubleToLongBits(other.depth)
+                && Objects.equals(voltage, other.voltage);
     }
 
 }

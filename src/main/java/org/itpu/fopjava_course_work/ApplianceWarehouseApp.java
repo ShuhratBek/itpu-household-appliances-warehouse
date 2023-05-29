@@ -3,41 +3,16 @@ package org.itpu.fopjava_course_work;
 import org.apache.maven.model.Model;
 import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
+import org.itpu.fopjava_course_work.criteria.SearchCriteria;
+import org.itpu.fopjava_course_work.dao.ApplianceDAO;
 import org.itpu.fopjava_course_work.entity.*;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class ApplianceWarehouseApp {
-    private static final List<Appliance<?>> appliances = new ArrayList<>();
-    private static final String AIR_CONDITIONERS_CSV = "air-conditioners.csv";
-    private static final String BLENDERS_CSV = "blenders.csv";
-    private static final String CLOTHES_STEAMERS_CSV = "clothes-steamers.csv";
-    private static final String COFFEE_MAKERS_CSV = "coffee-makers.csv";
-    private static final String DISHWASHERS_CSV = "dishwashers.csv";
-    private static final String DRYERS_CSV = "dryers.csv";
-    private static final String ELECTRIC_KETTLES_CSV = "electric-kettles.csv";
-    private static final String ELECTRIC_TOOTHBRUSHES_CSV = "electric-toothbrushes.csv";
-    private static final String FANS_CSV = "fans.csv";
-    private static final String GAMING_CONSOLES_CSV = "gaming-consoles.csv";
-    private static final String HAIR_DRYERS_CSV = "hair-dryers.csv";
-    private static final String HEATERS_CSV = "heaters.csv";
-    private static final String IRONS_CSV = "irons.csv";
-    private static final String MICROWAVES_CSV = "microwaves.csv";
-    private static final String OVENS_CSV = "ovens.csv";
-    private static final String REFRIGERATORS_CSV = "refrigerators.csv";
-    private static final String ROBOTIC_VACUUMS_CSV = "robotic-vacuums.csv";
-    private static final String SOUND_SYSTEMS_CSV = "sound-systems.csv";
-    private static final String STEAM_CLEANERS_CSV = "steam-cleaners.csv";
-    private static final String TELEVISIONS_CSV = "televisions.csv";
-    private static final String TOASTERS_CSV = "toasters.csv";
-    private static final String VACUUM_CLEANERS_CSV = "vacuum-cleaners.csv";
-    private static final String WASHING_MACHINES_CSV = "washing-machines.csv";
-    private static final String WATER_PURIFIERS_CSV = "water-purifiers.csv";
+    private static final Collection<Appliance<?>> appliances = new ArrayList<>();
 
     public static void main(String[] args) throws IOException, XmlPullParserException {
         MavenXpp3Reader reader = new MavenXpp3Reader();
@@ -97,7 +72,7 @@ public class ApplianceWarehouseApp {
         System.out.printf("%-5s %-20s %-25s %-10s %-8s\n", "ID", "Name", "Category", "Price", "Quantity");
 
         for (Appliance appliance : appliances) {
-            System.out.printf("%-5d %-20s %-25s $%-9.2f %-8d\n", appliance.getId(), appliance.getName(),
+            System.out.printf("%-5d %-20s %-25s $%-9d %-8d\n", appliance.getId(), appliance.getName(),
                     appliance.getCategory(), appliance.getPrice(), appliance.getQuantity());
         }
     }
@@ -154,168 +129,17 @@ public class ApplianceWarehouseApp {
     }
 
     private static void loadDataFromCSV() {
-        List<String[]> airConditionerData = readCsvData(AIR_CONDITIONERS_CSV);
-        for (String[] data : airConditionerData) {
-            AirConditioner airConditioner = new AirConditioner()
-                    .setId(Integer.parseInt(data[0]))
-                    .setName(data[1])
-                    .setType(data[2])
-                    .setBrand(data[3])
-                    .setModelName(data[4])
-                    .setCategory(data[5])
-                    .setPrice(Double.parseDouble(data[6]))
-                    .setQuantity(Integer.parseInt(data[7]))
-                    .setCoolingCapacity(Integer.parseInt(data[8]))
-                    .setHeatingCapacity(Integer.parseInt(data[9]))
-                    .setPowerConsumption(Integer.parseInt(data[10]))
-                    .setNoiseLevel(Integer.parseInt(data[11]))
-                    .setEnergyEfficiencyRating(data[12])
-                    .setColor(data[13])
-                    .setWeight(Double.parseDouble(data[14]))
-                    .setHeight(Double.parseDouble(data[15]))
-                    .setWidth(Double.parseDouble(data[16]))
-                    .setDepth(Double.parseDouble(data[17]))
-                    .setVoltage(data[18]);
-            appliances.add(airConditioner);
-        }
+        DaoFactory daoFactory = DaoFactory.INSTANCE;
+        ApplianceDAO<AirConditioner> airConditionerDAO = daoFactory.getApplianceDAO(AirConditioner.class);
+        ApplianceDAO<Blender> blenderDAO = daoFactory.getApplianceDAO(Blender.class);
+        ApplianceDAO<ClothesSteamer> clothesSteamerDAO = daoFactory.getApplianceDAO(ClothesSteamer.class);
+        Collection<AirConditioner> airConditioners = airConditionerDAO.findAll();
+        Collection<Blender> blenders = blenderDAO.findAll();
+        Collection<ClothesSteamer> clothesSteamers = clothesSteamerDAO.findAll();
 
-        List<String[]> blenderData = readCsvData(BLENDERS_CSV);
-        for (String[] data : blenderData) {
-            Blender blender = new Blender()
-                    .setId(Integer.parseInt(data[0]))
-                    .setName(data[1])
-                    .setType(data[2])
-                    .setBrand(data[3])
-                    .setModelName(data[4])
-                    .setCategory(data[5])
-                    .setPrice(Double.parseDouble(data[6]))
-                    .setQuantity(Integer.parseInt(data[7]))
-                    .setPowerConsumption(Integer.parseInt(data[8]))
-                    .setSpeedSettings(Integer.parseInt(data[9]))
-                    .setCapacity(Double.parseDouble(data[10]))
-                    .setColor(data[11])
-                    .setWeight(Double.parseDouble(data[12]))
-                    .setHeight(Double.parseDouble(data[13]))
-                    .setWidth(Double.parseDouble(data[14]))
-                    .setDepth(Double.parseDouble(data[15]))
-                    .setVoltage(data[16]);
-            appliances.add(blender);
-        }
-
-        List<String[]> clothesSteamerData = readCsvData(CLOTHES_STEAMERS_CSV);
-        for (String[] data : clothesSteamerData) {
-            ClothesSteamer clothesSteamer = new ClothesSteamer()
-                    .setId(Integer.parseInt(data[0]))
-                    .setName(data[1])
-                    .setType(data[2])
-                    .setBrand(data[3])
-                    .setModelName(data[4])
-                    .setCategory(data[5])
-                    .setPrice(Double.parseDouble(data[6]))
-                    .setQuantity(Integer.parseInt(data[7]))
-                    .setPowerConsumption(Integer.parseInt(data[8]))
-                    .setWaterTankCapacity(Double.parseDouble(data[9]))
-                    .setSteamTime(Integer.parseInt(data[10]))
-                    .setColor(data[11])
-                    .setWeight(Double.parseDouble(data[12]))
-                    .setHeight(Double.parseDouble(data[13]))
-                    .setWidth(Double.parseDouble(data[14]))
-                    .setDepth(Double.parseDouble(data[15]))
-                    .setVoltage(data[16]);
-            appliances.add(clothesSteamer);
-        }
-
-        List<String[]> coffeeMakerData = readCsvData(COFFEE_MAKERS_CSV);
-        for (String[] data : coffeeMakerData) {
-            CoffeeMaker coffeeMaker = new CoffeeMaker()
-                    .setId(Integer.parseInt(data[0]))
-                    .setName(data[1])
-                    .setType(data[2])
-                    .setBrand(data[3])
-                    .setModelName(data[4])
-                    .setCategory(data[5])
-                    .setPrice(Double.parseDouble(data[6]))
-                    .setQuantity(Integer.parseInt(data[7]))
-                    .setCapacity(Integer.parseInt(data[8]))
-                    .setPowerConsumption(Integer.parseInt(data[9]))
-                    .setColor(data[10])
-                    .setWeight(Double.parseDouble(data[11]))
-                    .setHeight(Double.parseDouble(data[12]))
-                    .setWidth(Double.parseDouble(data[13]))
-                    .setDepth(Double.parseDouble(data[14]))
-                    .setVoltage(data[15]);
-            appliances.add(coffeeMaker);
-        }
-
-        List<String[]> dishwasherData = readCsvData(DISHWASHERS_CSV);
-        for (String[] data : dishwasherData) {
-            Dishwasher dishwasher = new Dishwasher()
-                    .setId(Integer.parseInt(data[0]))
-                    .setName(data[1])
-                    .setType(data[2])
-                    .setBrand(data[3])
-                    .setModelName(data[4])
-                    .setCategory(data[5])
-                    .setPrice(Double.parseDouble(data[6]))
-                    .setQuantity(Integer.parseInt(data[7]))
-                    .setPlaceSettings(Integer.parseInt(data[8]))
-                    .setEnergyEfficiencyRating(data[9])
-                    .setWashingPrograms(Integer.parseInt(data[10]))
-                    .setColor(data[11])
-                    .setWeight(Double.parseDouble(data[12]))
-                    .setHeight(Double.parseDouble(data[13]))
-                    .setWidth(Double.parseDouble(data[14]))
-                    .setDepth(Double.parseDouble(data[15]))
-                    .setVoltage(data[16]);
-            appliances.add(dishwasher);
-        }
-
-        List<String[]> dryersData = readCsvData(DRYERS_CSV);
-        for (String[] data : dryersData) {
-            Dryer dryer = new Dryer()
-                    .setId(Integer.parseInt(data[0]))
-                    .setName(data[1])
-                    .setType(data[2])
-                    .setBrand(data[3])
-                    .setModelName(data[4])
-                    .setCategory(data[5])
-                    .setPrice(Double.parseDouble(data[6]))
-                    .setQuantity(Integer.parseInt(data[7]))
-                    .setCapacity(Double.parseDouble(data[8]))
-                    .setPowerConsumption(Integer.parseInt(data[9]))
-                    .setBoilTime(Double.parseDouble(data[10]))
-                    .setMaterial(data[11])
-                    .setColor(data[12])
-                    .setWeight(Double.parseDouble(data[13]))
-                    .setHeight(Double.parseDouble(data[14]))
-                    .setWidth(Double.parseDouble(data[15]))
-                    .setDepth(Double.parseDouble(data[16]))
-                    .setVoltage(data[17]);
-            appliances.add(dryer);
-        }
-
-        List<String[]> electricKettlesData = readCsvData(ELECTRIC_KETTLES_CSV);
-        for (String[] data : electricKettlesData) {
-            ElectricKettle electricKettle = new ElectricKettle()
-                    .setId(Integer.parseInt(data[0]))
-                    .setName(data[1])
-                    .setType(data[2])
-                    .setBrand(data[3])
-                    .setModelName(data[4])
-                    .setCategory(data[5])
-                    .setPrice(Double.parseDouble(data[6]))
-                    .setQuantity(Integer.parseInt(data[7]))
-                    .setMaterial(data[8])
-                    .setCapacity(Double.parseDouble(data[9]))
-                    .setColor(data[10])
-                    .setVoltage(data[11])
-                    .setPowerConsumption(Integer.parseInt(data[12]))
-                    .setWeight(Double.parseDouble(data[13]))
-                    .setHeight(Double.parseDouble(data[14]))
-                    .setWidth(Double.parseDouble(data[15]))
-                    .setDepth(Double.parseDouble(data[16]));
-            appliances.add(electricKettle);
-        }
+        appliances.addAll(airConditioners);
+        appliances.addAll(blenders);
+        appliances.addAll(clothesSteamers);
     }
     private static List<String[]> readCsvData(String csvFile) {
         List<String[]> data = new ArrayList<>();

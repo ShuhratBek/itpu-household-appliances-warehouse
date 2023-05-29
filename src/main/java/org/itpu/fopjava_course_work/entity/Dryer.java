@@ -1,5 +1,7 @@
 package org.itpu.fopjava_course_work.entity;
 
+import java.util.Objects;
+
 public class Dryer extends Appliance<Dryer> implements CapacityAware<Dryer>, PowerConsumable<Dryer>, BoilTimeProvider<Dryer>, MaterialProvider<Dryer> {
     private String material;
     private double boilTime;
@@ -77,8 +79,36 @@ public class Dryer extends Appliance<Dryer> implements CapacityAware<Dryer>, Pow
         this.powerConsumption = powerConsumption;
         return this;
     }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = super.hashCode();
+        result = prime * result + Objects.hash(material, boilTime, powerConsumption, capacity);
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!super.equals(obj))
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Dryer other = (Dryer) obj;
+        return Objects.equals(material, other.material)
+                && Double.doubleToLongBits(boilTime) == Double.doubleToLongBits(other.boilTime)
+                && powerConsumption == other.powerConsumption
+                && capacity == other.capacity;
+    }
+
     @Override
     public String toString() {
-        return "Dryer{" + String.join(", ", commonFields(), "material=" + material, "boilTime=" + boilTime, "powerConsumption=" + powerConsumption, "capacity=" + capacity) + "}";
+        return "Dryer [material=" + material
+                + ", boilTime=" + boilTime
+                + ", powerConsumption=" + powerConsumption
+                + ", capacity=" + capacity
+                + super.toString() + "]";
     }
 }

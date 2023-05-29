@@ -1,5 +1,7 @@
 package org.itpu.fopjava_course_work.entity;
 
+import java.util.Objects;
+
 public class ClothesSteamer extends Appliance<ClothesSteamer> implements PowerConsumable<ClothesSteamer>, WaterTankCapable<ClothesSteamer>, SteamTimeProvider<ClothesSteamer> {
     private int powerConsumption;
     private double waterTankCapacity;
@@ -60,7 +62,32 @@ public class ClothesSteamer extends Appliance<ClothesSteamer> implements PowerCo
     }
 
     @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = super.hashCode();
+        result = prime * result + Objects.hash(powerConsumption, waterTankCapacity, steamTime);
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!super.equals(obj))
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        ClothesSteamer other = (ClothesSteamer) obj;
+        return powerConsumption == other.powerConsumption
+                && Double.doubleToLongBits(waterTankCapacity) == Double.doubleToLongBits(other.waterTankCapacity)
+                && steamTime == other.steamTime;
+    }
+
+    @Override
     public String toString() {
-        return "ClothesSteamer{" + String.join(", ", commonFields(), "powerConsumption=" + powerConsumption, "waterTankCapacity=" + waterTankCapacity, "steamTime=" + steamTime) + "}";
+        return "ClothesSteamer [powerConsumption=" + powerConsumption
+                + ", waterTankCapacity=" + waterTankCapacity
+                + ", steamTime=" + steamTime
+                + super.toString() + "]";
     }
 }

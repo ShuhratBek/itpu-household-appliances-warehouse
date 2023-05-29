@@ -1,7 +1,7 @@
 package org.itpu.fopjava_course_work.entity;
 
 public interface CapacityOfCupAware<SELF> {
-    int getCapacity();
+    int getCapacityOfCup();
 
-    SELF setCapacity(int capacity);
+    SELF setCapacityOfCup(int capacityOfCup);
 }

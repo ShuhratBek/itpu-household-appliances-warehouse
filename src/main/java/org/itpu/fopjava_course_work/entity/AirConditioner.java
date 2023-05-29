@@ -1,5 +1,7 @@
 package org.itpu.fopjava_course_work.entity;
 
+import java.util.Objects;
+
 public class AirConditioner extends Appliance<AirConditioner> implements CoolingCapable<AirConditioner>, HeatingCapable<AirConditioner>, PowerConsumable<AirConditioner>, NoiseLevelAware<AirConditioner>, EnergyEfficiencyRatable<AirConditioner> {
 
     private int coolingCapacity;
@@ -79,7 +81,36 @@ public class AirConditioner extends Appliance<AirConditioner> implements Cooling
     }
 
     @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = super.hashCode();
+        result = prime * result + Objects.hash(coolingCapacity, heatingCapacity, powerConsumption, noiseLevel, energyEfficiencyRating);
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!super.equals(obj))
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        AirConditioner other = (AirConditioner) obj;
+        return coolingCapacity == other.coolingCapacity
+                && heatingCapacity == other.heatingCapacity
+                && powerConsumption == other.powerConsumption
+                && noiseLevel == other.noiseLevel
+                && Objects.equals(energyEfficiencyRating, other.energyEfficiencyRating);
+    }
+
+    @Override
     public String toString() {
-        return "AirConditioner{" + String.join(", ", commonFields(), "coolingCapacity=" + coolingCapacity, "heatingCapacity=" + heatingCapacity, "powerConsumption=" + powerConsumption, "noiseLevel=" + noiseLevel, "energyEfficiencyRating=" + energyEfficiencyRating) + "}";
+        return "AirConditioner [coolingCapacity=" + coolingCapacity
+                + ", heatingCapacity=" + heatingCapacity
+                + ", powerConsumption=" + powerConsumption
+                + ", noiseLevel=" + noiseLevel
+                + ", energyEfficiencyRating=" + energyEfficiencyRating
+                + super.toString() + "]";
     }
 }
