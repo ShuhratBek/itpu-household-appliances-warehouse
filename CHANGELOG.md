@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/ShuhratBek/itpu-household-appliances-warehouse/compare/v1.2.0...v1.3.0) (2023-06-06)
+
+
+### Features
+
+* **controller:** added controller ([9bdbac5](https://github.com/ShuhratBek/itpu-household-appliances-warehouse/commit/9bdbac5b71eeffc20d1e18b604e14c051c35a456))
+
 ## [1.2.0](https://github.com/ShuhratBek/itpu-household-appliances-warehouse/compare/v1.1.1...v1.2.0) (2023-05-29)
 
 
