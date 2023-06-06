@@ -1,4 +1,4 @@
-package org.itpu.fopjava_course_work.dao;
+package org.itpu.fopjava_course_work.parameter;
 
 import org.itpu.fopjava_course_work.entity.Appliance;
 

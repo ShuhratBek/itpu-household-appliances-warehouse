@@ -15,7 +15,6 @@ public class CoffeeMakerDAO extends AbstractDao<CoffeeMaker> {
                 forString(Appliance::setBrand),
                 forString(Appliance::setModelName),
                 forString(Appliance::setCategory),
-                forString(Appliance::setCategory),
                 forLong(Appliance::setPrice),
                 forInt(Appliance::setQuantity),
                 forInt(CoffeeMaker::setCapacityOfCup),

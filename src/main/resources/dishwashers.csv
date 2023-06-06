@@ -1,11 +1,11 @@
 ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Place Settings,Energy Efficiency Class,Washing Programs,Color,Weight (kg),Height (cm),Width (cm),Depth (cm),Voltage (V)
-45001,Bosch Freestanding Dishwasher,Dishwasher,Bosch,SMV40C30GB,Kitchen Appliances,499.00,8,12,A+,4,White,52.0,81.5,59.8,55.0,230
-45002,Siemens Integrated Dishwasher,Dishwasher,Siemens,SN636X01GE,Kitchen Appliances,799.00,5,13,A++,6,Stainless Steel,45.0,81.5,59.8,55.0,230
-45003,Miele Built-in Dishwasher,Dishwasher,Miele,G4263SCVi,Kitchen Appliances,1199.00,4,14,A++,5,White,50.0,80.5,59.8,57.0,230
-45004,AEG Freestanding Dishwasher,Dishwasher,AEG,FSE53600Z,Kitchen Appliances,699.00,6,13,A+,4,Stainless Steel,47.0,85.0,59.6,61.0,230
-45005,Whirlpool Integrated Dishwasher,Dishwasher,Whirlpool,WCIO3T123PEF,Kitchen Appliances,899.00,5,14,A++,5,Stainless Steel,48.0,82.0,59.8,55.0,230
-45006,Electrolux Built-in Dishwasher,Dishwasher,Electrolux,ESL5310LO,Kitchen Appliances,599.00,7,13,A+,4,White,45.0,81.8,59.6,55.0,230
-45007,Beko Freestanding Dishwasher,Dishwasher,Beko,DFN05310X,Kitchen Appliances,449.00,9,12,A+,4,Stainless Steel,46.0,85.0,59.8,60.0,230
-45008,Samsung Integrated Dishwasher,Dishwasher,Samsung,DW60R2031BB,Kitchen Appliances,769.00,6,13,A+,5,White,49.0,81.5,59.8,55.0,230
-45009,Hotpoint Built-in Dishwasher,Dishwasher,Hotpoint,HD5G00CCX,Kitchen Appliances,529.00,8,14,A++,6,Stainless Steel,48.0,82.0,59.6,55.0,230
-45010,Indesit Freestanding Dishwasher,Dishwasher,Indesit,DFP27T94Z,Kitchen Appliances,399.00,10,13,A+,4,White,44.0,85.0,59.8,60.0,230
+45001,Bosch Freestanding Dishwasher,Dishwasher,Bosch,SMV40C30GB,Kitchen Appliances,499,8,12,A+,4,White,52.0,81.5,59.8,55.0,230
+45002,Siemens Integrated Dishwasher,Dishwasher,Siemens,SN636X01GE,Kitchen Appliances,799,5,13,A++,6,Stainless Steel,45.0,81.5,59.8,55.0,230
+45003,Miele Built-in Dishwasher,Dishwasher,Miele,G4263SCVi,Kitchen Appliances,1199,4,14,A++,5,White,50.0,80.5,59.8,57.0,230
+45004,AEG Freestanding Dishwasher,Dishwasher,AEG,FSE53600Z,Kitchen Appliances,699,6,13,A+,4,Stainless Steel,47.0,85.0,59.6,61.0,230
+45005,Whirlpool Integrated Dishwasher,Dishwasher,Whirlpool,WCIO3T123PEF,Kitchen Appliances,899,5,14,A++,5,Stainless Steel,48.0,82.0,59.8,55.0,230
+45006,Electrolux Built-in Dishwasher,Dishwasher,Electrolux,ESL5310LO,Kitchen Appliances,599,7,13,A+,4,White,45.0,81.8,59.6,55.0,230
+45007,Beko Freestanding Dishwasher,Dishwasher,Beko,DFN05310X,Kitchen Appliances,449,9,12,A+,4,Stainless Steel,46.0,85.0,59.8,60.0,230
+45008,Samsung Integrated Dishwasher,Dishwasher,Samsung,DW60R2031BB,Kitchen Appliances,769,6,13,A+,5,White,49.0,81.5,59.8,55.0,230
+45009,Hotpoint Built-in Dishwasher,Dishwasher,Hotpoint,HD5G00CCX,Kitchen Appliances,529,8,14,A++,6,Stainless Steel,48.0,82.0,59.6,55.0,230
+45010,Indesit Freestanding Dishwasher,Dishwasher,Indesit,DFP27T94Z,Kitchen Appliances,399,10,13,A+,4,White,44.0,85.0,59.8,60.0,230

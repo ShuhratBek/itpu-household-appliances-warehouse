@@ -5,10 +5,7 @@ import org.itpu.fopjava_course_work.entity.Appliance;
 import org.itpu.fopjava_course_work.parser.CsvLineParser;
 import org.itpu.fopjava_course_work.parser.CsvFieldParser;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -25,6 +22,9 @@ public abstract class AbstractDao<A extends Appliance<A>> implements ApplianceDA
 
     private BufferedReader getBufferedReader(String path) throws IOException {
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(path);
+        if (inputStream == null) {
+            throw new FileNotFoundException("Resource file not found: " + path);
+        }
         return new BufferedReader(new InputStreamReader(inputStream));
     }
 
@@ -42,25 +42,6 @@ public abstract class AbstractDao<A extends Appliance<A>> implements ApplianceDA
                 }
             }
         } catch (IOException e) {
-            // Handle file reading and parsing exceptions
-            e.printStackTrace();
-        }
-        return results;
-    }
-
-    @Override
-    public Collection<A> findAll() {
-        List<A> results = new ArrayList<>();
-        try (BufferedReader reader = getBufferedReader(csvPath)) {
-            // Skip the first line (header)
-            reader.readLine();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                A appliance = parser.parseLine(line);
-                results.add(appliance);
-            }
-        } catch (IOException e) {
-            // Handle file reading and parsing exceptions
             e.printStackTrace();
         }
         return results;

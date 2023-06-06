@@ -15,7 +15,6 @@ public class DryerDAO extends AbstractDao<Dryer> {
                 forString(Appliance::setBrand),
                 forString(Appliance::setModelName),
                 forString(Appliance::setCategory),
-                forString(Appliance::setCategory),
                 forLong(Appliance::setPrice),
                 forInt(Appliance::setQuantity),
                 forDouble(Dryer::setCapacity),

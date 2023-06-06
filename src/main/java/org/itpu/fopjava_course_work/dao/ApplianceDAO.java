@@ -7,5 +7,4 @@ import java.util.Collection;
 
 public interface ApplianceDAO<A extends Appliance<A>> {
     Collection<A> find(SearchCriteria<A> criteria);
-    Collection<A> findAll();
 }

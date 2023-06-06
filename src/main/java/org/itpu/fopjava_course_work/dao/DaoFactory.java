@@ -1,6 +1,5 @@
-package org.itpu.fopjava_course_work;
+package org.itpu.fopjava_course_work.dao;
 
-import org.itpu.fopjava_course_work.dao.*;
 import org.itpu.fopjava_course_work.entity.*;
 
 public enum DaoFactory {

@@ -15,7 +15,6 @@ public class DishwasherDAO extends AbstractDao<Dishwasher> {
                 forString(Appliance::setBrand),
                 forString(Appliance::setModelName),
                 forString(Appliance::setCategory),
-                forString(Appliance::setCategory),
                 forLong(Appliance::setPrice),
                 forInt(Appliance::setQuantity),
                 forInt(Dishwasher::setPlaceSettings),

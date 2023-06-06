@@ -3,6 +3,7 @@ package org.itpu.fopjava_course_work.dao;
 import org.itpu.fopjava_course_work.entity.Appliance;
 import org.itpu.fopjava_course_work.entity.PowerConsumable;
 import org.itpu.fopjava_course_work.exception.InvalidParameterArguments;
+import org.itpu.fopjava_course_work.parameter.Parameter;
 
 public record PowerConsumptionParameter<A extends
         Appliance<A> & PowerConsumable<A>>(int targetPowerConsumption)

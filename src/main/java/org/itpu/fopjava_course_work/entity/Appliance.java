@@ -17,7 +17,7 @@ public abstract class Appliance<SELF extends Appliance<SELF>> {
     protected double depth;
     protected int quantity;
     protected String color;
-    private String voltage;
+    protected String voltage;
 
     public int getId() {
         return id;
@@ -191,5 +191,4 @@ public abstract class Appliance<SELF extends Appliance<SELF>> {
                 && Double.doubleToLongBits(depth) == Double.doubleToLongBits(other.depth)
                 && Objects.equals(voltage, other.voltage);
     }
-
 }

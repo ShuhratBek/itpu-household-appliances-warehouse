@@ -5,36 +5,23 @@ import java.util.Objects;
 public class CoffeeMaker extends Appliance<CoffeeMaker> implements CapacityOfCupAware<CoffeeMaker>, PowerConsumable<CoffeeMaker> {
     private int capacityOfCup;
     private int powerConsumption;
-    /**
-     * @return
-     */
+
     @Override
     public int getPowerConsumption() {
         return powerConsumption;
     }
 
-    /**
-     * @param powerConsumption
-     * @return
-     */
     @Override
     public CoffeeMaker setPowerConsumption(int powerConsumption) {
         this.powerConsumption = powerConsumption;
         return this;
     }
 
-    /**
-     * @return
-     */
     @Override
     public int getCapacityOfCup() {
         return capacityOfCup;
     }
 
-    /**
-     * @param capacityOfCup
-     * @return
-     */
     @Override
     public CoffeeMaker setCapacityOfCup(int capacityOfCup) {
         this.capacityOfCup = capacityOfCup;

@@ -8,9 +8,6 @@ public class Blender extends Appliance<Blender> implements PowerConsumable<Blend
     int speedSettings;
     double capacity;
 
-    /**
-     * @return
-     */
     @Override
     public int getPowerConsumption() {
         return powerConsumption;
@@ -21,36 +18,22 @@ public class Blender extends Appliance<Blender> implements PowerConsumable<Blend
         return this;
     }
 
-    /**
-     * @return
-     */
     @Override
     public int getSpeedSettings() {
         return speedSettings;
     }
 
-    /**
-     * @param speedSettings
-     * @return
-     */
     @Override
     public Blender setSpeedSettings(int speedSettings) {
         this.speedSettings = speedSettings;
         return this;
     }
 
-    /**
-     * @return
-     */
     @Override
     public double getCapacity() {
         return capacity;
     }
 
-    /**
-     * @param capacity
-     * @return
-     */
     @Override
     public Blender setCapacity(double capacity) {
         this.capacity = capacity;

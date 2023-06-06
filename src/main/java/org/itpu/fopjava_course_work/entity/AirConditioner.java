@@ -10,9 +10,6 @@ public class AirConditioner extends Appliance<AirConditioner> implements Cooling
     private int noiseLevel;
     private String energyEfficiencyRating;
 
-    /**
-     * @return
-     */
     @Override
     public int getCoolingCapacity() {
         return coolingCapacity;
@@ -24,9 +21,6 @@ public class AirConditioner extends Appliance<AirConditioner> implements Cooling
         return this;
     }
 
-    /**
-     * @return
-     */
     @Override
     public int getHeatingCapacity() {
         return heatingCapacity;
@@ -38,9 +32,6 @@ public class AirConditioner extends Appliance<AirConditioner> implements Cooling
         return this;
     }
 
-    /**
-     * @return
-     */
     @Override
     public int getPowerConsumption() {
         return powerConsumption;
@@ -52,9 +43,6 @@ public class AirConditioner extends Appliance<AirConditioner> implements Cooling
         return this;
     }
 
-    /**
-     * @return
-     */
     @Override
     public int getNoiseLevel() {
         return noiseLevel;
@@ -66,9 +54,6 @@ public class AirConditioner extends Appliance<AirConditioner> implements Cooling
         return this;
     }
 
-    /**
-     * @return
-     */
     @Override
     public String getEnergyEfficiencyRating() {
         return energyEfficiencyRating;

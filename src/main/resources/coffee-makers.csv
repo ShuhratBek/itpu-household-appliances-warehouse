@@ -1,11 +1,11 @@
 ID,Name,Type,Brand,Model Name,Category,Price,Quantity,Capacity (cups),Power Consumption (W),Color,Weight (kg),Height (cm),Width (cm),Depth (cm),Voltage (V)
-46001,DeLonghi Espresso Machine,Coffee Maker,DeLonghi,ECAM350.75.S,Kitchen Appliances,799.00,5,12,1450,Silver,9.0,35.1,23.8,43.0,230
-46002,Jura Fully Automatic Coffee Machine,Coffee Maker,Jura,E6 Piano Black,Kitchen Appliances,1399.00,3,8,1450,Black,9.8,34.6,28.0,44.4,230
-46003,Philips Filter Coffee Machine,Coffee Maker,Philips,HD7546/20,Kitchen Appliances,59.99,8,10,1000,Black,1.5,36.1,22.0,22.5,230
-46004,Bosch Tassimo Coffee Maker,Coffee Maker,Bosch,TAS1402,Kitchen Appliances,89.00,6,1,1300,Black,2.2,25.1,16.7,30.5,230
-46005,Melitta Pour Over Coffee Maker,Coffee Maker,Melitta,6708050,Kitchen Appliances,34.99,10,6,900,Transparent,0.6,24.0,17.5,13.0,230
-46006,Krups Espresso Machine,Coffee Maker,Krups,XP3208,Kitchen Appliances,129.00,4,2,1450,Black,4.2,30.5,14.5,29.5,230
-46007,Sage Barista Express Espresso Machine,Coffee Maker,Sage,BES875UK,Kitchen Appliances,599.00,2,8,1850,Stainless Steel,9.0,40.6,33.0,31.0,230
-46008,Severin Filter Coffee Machine,Coffee Maker,Severin,KA 4479,Kitchen Appliances,29.99,12,10,1000,Black,1.2,33.2,21.4,17.4,230
-46009,Kenwood Coffee Maker,Coffee Maker,Kenwood,CM020,Brewing Equipment,49.99,7,6,650,White,1.0,23.0,18.0,18.0,230
-46010,Smeg Espresso Coffee Machine,Coffee Maker,Smeg,ECF01PBUK,Kitchen Appliances,319.00,3,5,1350,Pastel Blue,4.4,30.3,14.9,33.0,230
+46001,DeLonghi Espresso Machine,Coffee Maker,DeLonghi,ECAM350.75.S,Kitchen Appliances,799,5,12,1450,Silver,9.0,35.1,23.8,43.0,230
+46002,Jura Fully Automatic Coffee Machine,Coffee Maker,Jura,E6 Piano Black,Kitchen Appliances,1399,3,8,1450,Black,9.8,34.6,28.0,44.4,230
+46003,Philips Filter Coffee Machine,Coffee Maker,Philips,HD7546/20,Kitchen Appliances,59,8,10,1000,Black,1.5,36.1,22.0,22.5,230
+46004,Bosch Tassimo Coffee Maker,Coffee Maker,Bosch,TAS1402,Kitchen Appliances,89,6,1,1300,Black,2.2,25.1,16.7,30.5,230
+46005,Melitta Pour Over Coffee Maker,Coffee Maker,Melitta,6708050,Kitchen Appliances,34,10,6,900,Transparent,0.6,24.0,17.5,13.0,230
+46006,Krups Espresso Machine,Coffee Maker,Krups,XP3208,Kitchen Appliances,129,4,2,1450,Black,4.2,30.5,14.5,29.5,230
+46007,Sage Barista Express Espresso Machine,Coffee Maker,Sage,BES875UK,Kitchen Appliances,599,2,8,1850,Stainless Steel,9.0,40.6,33.0,31.0,230
+46008,Severin Filter Coffee Machine,Coffee Maker,Severin,KA 4479,Kitchen Appliances,29,12,10,1000,Black,1.2,33.2,21.4,17.4,230
+46009,Kenwood Coffee Maker,Coffee Maker,Kenwood,CM020,Brewing Equipment,49,7,6,650,White,1.0,23.0,18.0,18.0,230
+46010,Smeg Espresso Coffee Machine,Coffee Maker,Smeg,ECF01PBUK,Kitchen Appliances,319,3,5,1350,Pastel Blue,4.4,30.3,14.9,33.0,230
