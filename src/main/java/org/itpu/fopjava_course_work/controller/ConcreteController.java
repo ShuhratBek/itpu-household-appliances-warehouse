@@ -2,7 +2,6 @@ package org.itpu.fopjava_course_work.controller;
 
 import org.itpu.fopjava_course_work.converter.ParameterConverter;
 import org.itpu.fopjava_course_work.converter.RawConverters;
-import org.itpu.fopjava_course_work.criteria.AbstractCriteria;
 import org.itpu.fopjava_course_work.criteria.SearchCriteria;
 import org.itpu.fopjava_course_work.entity.Appliance;
 import org.itpu.fopjava_course_work.parameter.Parameter;

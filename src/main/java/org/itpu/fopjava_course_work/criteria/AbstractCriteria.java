@@ -10,7 +10,7 @@ import java.util.Map;
 public abstract class AbstractCriteria<A extends Appliance<A>>
         implements SearchCriteria<A> {
 
-    private Class<A> persistantClass;
+    private final Class<A> persistantClass;
     protected final Map<Class<?>, Parameter<A>> parameters = new HashMap<>();
 
     @SuppressWarnings("unchecked")
