@@ -10,6 +10,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class DispatcherController {
     private final Map<String, ConcreteController<?>> controllers;
@@ -58,7 +59,8 @@ public class DispatcherController {
             System.out.println(headerEqualSigns + header + headerEqualSigns);
             System.out.println("1. List All Appliances");
             System.out.println("2. Search Appliances");
-            System.out.println("3. Quit");
+            System.out.println("3. Clear filters");
+            System.out.println("4. Quit");
             System.out.println(dashSign.repeat(lineCount));
             System.out.print("Enter your choice: ");
 
@@ -68,7 +70,8 @@ public class DispatcherController {
             switch (choice) {
                 case 1 -> viewAllAppliances(scanner);
                 case 2 -> searchAppliances(scanner);
-                case 3 -> {
+                case 3 -> clearFilters();
+                case 4 -> {
                     isRunning = false;
                     System.out.println("Exiting the application. Goodbye!");
                 }
@@ -80,6 +83,10 @@ public class DispatcherController {
         scanner.close();
     }
 
+    private void clearFilters() {
+        parameterConverters.clear();
+    }
+
     private void searchAppliances(Scanner scanner) {
         System.out.print("Enter the field name: ");
         String field = scanner.nextLine();
@@ -89,17 +96,7 @@ public class DispatcherController {
         System.out.println(dashSign.repeat(lineCount));
         parameterConverters.put(field.trim(), keyword.trim());
 
-        ConcreteController<?> controller = controllers.get("airConditioner");
-        ConcreteController<?> controllerB = controllers.get("blender");
-        ConcreteController<?> controllerC = controllers.get("clothesSteamer");
-        Collection<? extends Appliance<?>> airConditioners = controller.find(parameterConverters);
-        Collection<? extends Appliance<?>> blenders = controllerB.find(parameterConverters);
-        Collection<? extends Appliance<?>> clothesSteamer = controllerC.find(parameterConverters);
-
-        Collection<Appliance<?>> searchResults = new ArrayList<>();
-        searchResults.addAll(airConditioners);
-        searchResults.addAll(blenders);
-        searchResults.addAll(clothesSteamer);
+        List<Appliance<?>> searchResults = controllers.values().stream().map(it -> it.find(parameterConverters)).flatMap(Collection::stream).collect(Collectors.toList());
 
         if (searchResults.isEmpty()) {
             System.out.println("No appliances found matching the search keyword.");

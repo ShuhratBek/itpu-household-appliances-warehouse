@@ -1,17 +1,19 @@
 package org.itpu.fopjava_course_work.criteria;
 
-import org.itpu.fopjava_course_work.parameter.Parameter;
 import org.itpu.fopjava_course_work.entity.Appliance;
+import org.itpu.fopjava_course_work.validators.FieldValidator;
 
 import java.lang.reflect.ParameterizedType;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public abstract class AbstractCriteria<A extends Appliance<A>>
         implements SearchCriteria<A> {
 
     private final Class<A> persistantClass;
-    protected final Map<Class<?>, Parameter<A>> parameters = new HashMap<>();
+    protected final Map<Class<A>, List<FieldValidator>> fieldValidators = new HashMap<>();
 
     @SuppressWarnings("unchecked")
     public AbstractCriteria() {
@@ -24,16 +26,19 @@ public abstract class AbstractCriteria<A extends Appliance<A>>
     }
 
     @Override
-    public <F extends Parameter<A>> SearchCriteria<A> add(F parameter) {
-        parameters.put(parameter.getClass(), parameter);
+    public SearchCriteria<A> add(Class<A> clazz, FieldValidator fieldValidator) {
+        fieldValidators.putIfAbsent(clazz, new ArrayList<>());
+        fieldValidators.get(clazz).add(fieldValidator);
         return this;
     }
 
     @Override
     public boolean test(A appliance) {
-        for (Parameter<A> parameter : parameters.values()) {
-            if (!parameter.test(appliance)) {
-                return false;
+        if (fieldValidators.containsKey(appliance.getClass())) {
+            for (FieldValidator fieldValidator : fieldValidators.get(appliance.getClass())) {
+                if (!fieldValidator.test(appliance)) {
+                    return false;
+                }
             }
         }
         return true;
