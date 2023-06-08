@@ -4,18 +4,17 @@ import org.itpu.fopjava_course_work.criteria.SearchCriteria;
 import org.itpu.fopjava_course_work.entity.Appliance;
 import org.itpu.fopjava_course_work.parser.CsvLineParser;
 import org.itpu.fopjava_course_work.parser.CsvFieldParser;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.function.*;
 
-public abstract class AbstractDao<A extends Appliance<A>> implements ApplianceDAO<A> {
+public abstract class AbstractDao<T extends Appliance<T>> implements ApplianceDAO<T> {
     private final String csvPath;
-    private final CsvLineParser<A> parser;
+    private final CsvLineParser<T> parser;
 
-    protected AbstractDao(String path, CsvLineParser<A> parser) {
+    protected AbstractDao(String path, CsvLineParser<T> parser) {
         this.csvPath = path;
         this.parser = parser;
     }
@@ -29,14 +28,14 @@ public abstract class AbstractDao<A extends Appliance<A>> implements ApplianceDA
     }
 
     @Override
-    public Collection<A> find(SearchCriteria<A> criteria) {
-        List<A> results = new ArrayList<>();
+    public Collection<T> find(SearchCriteria<T> criteria) {
+        List<T> results = new ArrayList<>();
         try (BufferedReader reader = getBufferedReader(csvPath)) {
             // Skip the first line (header)
             reader.readLine();
             String line;
             while ((line = reader.readLine()) != null) {
-                A appliance = parser.parseLine(line);
+                T appliance = parser.parseLine(line);
                 if (criteria.test(appliance)) {
                     results.add(appliance);
                 }

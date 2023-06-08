@@ -5,7 +5,6 @@ import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 import org.itpu.fopjava_course_work.entity.Appliance;
 import org.itpu.fopjava_course_work.service.ApplianceService;
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -13,7 +12,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class DispatcherController {
-    private final Map<String, ConcreteController<?>> controllers;
+    private final Map<String, AbstractController<?>> controllers;
     private static final Collection<Appliance<?>> appliances = new ArrayList<>();
     private final Map<String, String> parameterConverters;
     private final int lineCount = 160;
@@ -96,7 +95,7 @@ public class DispatcherController {
         System.out.println(dashSign.repeat(lineCount));
         parameterConverters.put(field.trim(), keyword.trim());
 
-        List<Appliance<?>> searchResults = controllers.values().stream().map(it -> it.find(parameterConverters)).flatMap(Collection::stream).collect(Collectors.toList());
+        List<Appliance<?>> searchResults = controllers.values().stream().map(it -> it.findBy(parameterConverters)).flatMap(Collection::stream).collect(Collectors.toList());
 
         if (searchResults.isEmpty()) {
             System.out.println("No appliances found matching the search keyword.");
@@ -119,14 +118,7 @@ public class DispatcherController {
     }
 
     private void viewAllAppliances(Scanner scanner) {
-        String[] applianceTypes = {"airConditioner", "blender", "clothesSteamer", "coffeeMaker", "dishWasher", "dryer"};
-
-        for (String applianceType : applianceTypes) {
-            ConcreteController<?> controller = controllers.get(applianceType);
-            Collection<? extends Appliance<?>> applianceList = controller.findAll();
-            appliances.addAll(applianceList);
-        }
-
+        appliances.addAll(controllers.values().stream().map(AbstractController::getAll).flatMap(Collection::stream).toList());
         boolean isRunning = true;
 
         while (isRunning) {

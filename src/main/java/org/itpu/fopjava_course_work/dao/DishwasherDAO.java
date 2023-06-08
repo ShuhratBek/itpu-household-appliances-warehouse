@@ -3,7 +3,6 @@ package org.itpu.fopjava_course_work.dao;
 import org.itpu.fopjava_course_work.entity.Appliance;
 import org.itpu.fopjava_course_work.entity.Dishwasher;
 import org.itpu.fopjava_course_work.parser.CsvLineParser;
-
 import java.util.List;
 
 public class DishwasherDAO extends AbstractDao<Dishwasher> {

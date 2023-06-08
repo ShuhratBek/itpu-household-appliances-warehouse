@@ -2,38 +2,37 @@ package org.itpu.fopjava_course_work.criteria;
 
 import org.itpu.fopjava_course_work.entity.Appliance;
 import org.itpu.fopjava_course_work.validators.FieldValidator;
-
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public abstract class AbstractCriteria<A extends Appliance<A>>
-        implements SearchCriteria<A> {
+public abstract class AbstractCriteria<T extends Appliance<T>>
+        implements SearchCriteria<T> {
 
-    private final Class<A> persistantClass;
-    protected final Map<Class<A>, List<FieldValidator>> fieldValidators = new HashMap<>();
+    private final Class<T> persistantClass;
+    protected final Map<Class<T>, List<FieldValidator>> fieldValidators = new HashMap<>();
 
     @SuppressWarnings("unchecked")
     public AbstractCriteria() {
-        persistantClass = (Class<A>) ((ParameterizedType) getClass()
+        persistantClass = (Class<T>) ((ParameterizedType) getClass()
                 .getGenericSuperclass()).getActualTypeArguments()[0];
     }
 
-    public Class<A> getApplianceType() {
+    public Class<T> getApplianceType() {
         return persistantClass;
     }
 
     @Override
-    public SearchCriteria<A> add(Class<A> clazz, FieldValidator fieldValidator) {
+    public SearchCriteria<T> add(Class<T> clazz, FieldValidator fieldValidator) {
         fieldValidators.putIfAbsent(clazz, new ArrayList<>());
         fieldValidators.get(clazz).add(fieldValidator);
         return this;
     }
 
     @Override
-    public boolean test(A appliance) {
+    public boolean test(T appliance) {
         if (fieldValidators.containsKey(appliance.getClass())) {
             for (FieldValidator fieldValidator : fieldValidators.get(appliance.getClass())) {
                 if (!fieldValidator.test(appliance)) {

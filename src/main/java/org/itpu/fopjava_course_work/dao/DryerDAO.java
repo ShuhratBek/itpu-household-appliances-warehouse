@@ -3,7 +3,6 @@ package org.itpu.fopjava_course_work.dao;
 import org.itpu.fopjava_course_work.entity.Appliance;
 import org.itpu.fopjava_course_work.entity.Dryer;
 import org.itpu.fopjava_course_work.parser.CsvLineParser;
-
 import java.util.List;
 
 public class DryerDAO extends AbstractDao<Dryer> {

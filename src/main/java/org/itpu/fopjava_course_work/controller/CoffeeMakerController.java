@@ -5,7 +5,7 @@ import org.itpu.fopjava_course_work.criteria.SearchCriteria;
 import org.itpu.fopjava_course_work.entity.CoffeeMaker;
 import org.itpu.fopjava_course_work.service.ApplianceService;
 
-public class CoffeeMakerController extends ConcreteController<CoffeeMaker> {
+public class CoffeeMakerController extends AbstractController<CoffeeMaker> {
 
     public CoffeeMakerController(ApplianceService applianceService) {
         super(applianceService);
