@@ -2,6 +2,7 @@ package org.itpu.fopjava_course_work.criteria;
 
 import org.itpu.fopjava_course_work.entity.Appliance;
 import org.itpu.fopjava_course_work.validators.FieldValidator;
+
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,8 +12,8 @@ import java.util.Map;
 public abstract class AbstractCriteria<T extends Appliance<T>>
         implements SearchCriteria<T> {
 
-    private final Class<T> persistantClass;
     protected final Map<Class<T>, List<FieldValidator>> fieldValidators = new HashMap<>();
+    private final Class<T> persistantClass;
 
     @SuppressWarnings("unchecked")
     public AbstractCriteria() {

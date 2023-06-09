@@ -2,9 +2,10 @@ package org.itpu.fopjava_course_work.parser;
 
 import org.itpu.fopjava_course_work.entity.Appliance;
 import org.itpu.fopjava_course_work.entity.ApplianceFactory;
+
 import java.util.List;
 
-public class CsvLineParser <T extends Appliance<T>> {
+public class CsvLineParser<T extends Appliance<T>> {
     private final ApplianceFactory<T> factory;
     private final List<CsvFieldParser<T>> fieldParsers;
 

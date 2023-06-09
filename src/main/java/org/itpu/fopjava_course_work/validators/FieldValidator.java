@@ -1,6 +1,7 @@
 package org.itpu.fopjava_course_work.validators;
 
 import org.itpu.fopjava_course_work.entity.Appliance;
+
 import java.lang.reflect.Field;
 import java.util.regex.Pattern;
 
@@ -22,7 +23,7 @@ public class FieldValidator {
                     this.fieldValue = null;
                 }
             } catch (Throwable t) {
-                // is not a range
+                System.out.println("value is not a range");
             }
         }
     }
@@ -31,7 +32,7 @@ public class FieldValidator {
         return Pattern.matches("[0-9]{1,13}(\\.[0-9]*)?", obj.toString());
     }
 
-    public <T extends Appliance<T>>boolean test(T appliance) {
+    public <T extends Appliance<T>> boolean test(T appliance) {
         Object value = getTypedValue(appliance);
         if (fieldValue != null && value != null) {
             return fieldValue.equals(value.toString());
@@ -57,7 +58,7 @@ public class FieldValidator {
         }
     }
 
-    private <T extends Appliance<T>>Object getTypedValue(T appliance) {
+    private <T extends Appliance<T>> Object getTypedValue(T appliance) {
         if (appliance != null) {
             try {
                 return getFieldValue(appliance);

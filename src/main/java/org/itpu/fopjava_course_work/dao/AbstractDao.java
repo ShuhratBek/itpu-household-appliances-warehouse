@@ -2,13 +2,14 @@ package org.itpu.fopjava_course_work.dao;
 
 import org.itpu.fopjava_course_work.criteria.SearchCriteria;
 import org.itpu.fopjava_course_work.entity.Appliance;
-import org.itpu.fopjava_course_work.parser.CsvLineParser;
 import org.itpu.fopjava_course_work.parser.CsvFieldParser;
+import org.itpu.fopjava_course_work.parser.CsvLineParser;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.function.*;
+import java.util.function.BiConsumer;
 
 public abstract class AbstractDao<T extends Appliance<T>> implements ApplianceDAO<T> {
     private final String csvPath;
@@ -17,6 +18,22 @@ public abstract class AbstractDao<T extends Appliance<T>> implements ApplianceDA
     protected AbstractDao(String path, CsvLineParser<T> parser) {
         this.csvPath = path;
         this.parser = parser;
+    }
+
+    public static <T> CsvFieldParser<T> forInt(BiConsumer<T, Integer> setter) {
+        return (obj, value) -> setter.accept(obj, Integer.parseInt(value));
+    }
+
+    public static <T> CsvFieldParser<T> forLong(BiConsumer<T, Long> setter) {
+        return (obj, value) -> setter.accept(obj, Long.parseLong(value));
+    }
+
+    public static <T> CsvFieldParser<T> forDouble(BiConsumer<T, Double> setter) {
+        return (obj, value) -> setter.accept(obj, Double.parseDouble(value));
+    }
+
+    public static <T> CsvFieldParser<T> forString(BiConsumer<T, String> setter) {
+        return setter::accept;
     }
 
     private BufferedReader getBufferedReader(String path) throws IOException {
@@ -44,21 +61,5 @@ public abstract class AbstractDao<T extends Appliance<T>> implements ApplianceDA
             e.printStackTrace();
         }
         return results;
-    }
-
-    public static <T> CsvFieldParser<T> forInt(BiConsumer<T, Integer> setter) {
-        return (obj, value) -> setter.accept(obj, Integer.parseInt(value));
-    }
-
-    public static <T> CsvFieldParser<T> forLong(BiConsumer<T, Long> setter) {
-        return (obj, value) -> setter.accept(obj, Long.parseLong(value));
-    }
-
-    public static <T> CsvFieldParser<T> forDouble(BiConsumer<T, Double> setter) {
-        return (obj, value) -> setter.accept(obj, Double.parseDouble(value));
-    }
-
-    public static <T> CsvFieldParser<T> forString(BiConsumer<T, String> setter) {
-        return setter::accept;
     }
 }

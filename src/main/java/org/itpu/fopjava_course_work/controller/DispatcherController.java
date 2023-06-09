@@ -5,6 +5,8 @@ import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 import org.itpu.fopjava_course_work.entity.Appliance;
 import org.itpu.fopjava_course_work.service.ApplianceService;
+import org.itpu.fopjava_course_work.util.TableView;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -12,10 +14,10 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class DispatcherController {
+    private static final List<Appliance<?>> appliances = new ArrayList<>();
     private final Map<String, AbstractController<?>> controllers;
-    private static final Collection<Appliance<?>> appliances = new ArrayList<>();
     private final Map<String, String> parameterConverters;
-    private final int lineCount = 160;
+    private final int lineCount = 168;
     private final String equalSign = "=";
     private final String dashSign = "-";
 
@@ -26,7 +28,7 @@ public class DispatcherController {
         controllers.put("blender", new BlenderController(applianceService));
         controllers.put("clothesSteamer", new ClothesSteamerController(applianceService));
         controllers.put("coffeeMaker", new CoffeeMakerController(applianceService));
-        controllers.put("dishWasher", new DishWasherController(applianceService));
+        controllers.put("dishWasher", new DishwasherController(applianceService));
         controllers.put("dryer", new DryerController(applianceService));
     }
 
@@ -41,7 +43,7 @@ public class DispatcherController {
         String email = model.getDevelopers().get(0).getEmail();
 
         System.out.println(equalSign.repeat(lineCount));
-        System.out.println("   Welcome to " + appName);
+        System.out.println("Welcome to " + appName);
         System.out.println(equalSign.repeat(lineCount));
         System.out.println("Version: " + version);
         System.out.println("Created on: " + creationDate);
@@ -58,23 +60,29 @@ public class DispatcherController {
             System.out.println(headerEqualSigns + header + headerEqualSigns);
             System.out.println("1. List All Appliances");
             System.out.println("2. Search Appliances");
-            System.out.println("3. Clear filters");
-            System.out.println("4. Quit");
+            System.out.println("3. Quit");
             System.out.println(dashSign.repeat(lineCount));
             System.out.print("Enter your choice: ");
 
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+            try {
+                int choice = scanner.nextInt();
+                scanner.nextLine();
 
-            switch (choice) {
-                case 1 -> viewAllAppliances(scanner);
-                case 2 -> searchAppliances(scanner);
-                case 3 -> clearFilters();
-                case 4 -> {
-                    isRunning = false;
-                    System.out.println("Exiting the application. Goodbye!");
+                switch (choice) {
+                    case 1 -> viewAllAppliances(scanner);
+                    case 2 -> searchAppliances(scanner);
+                    case 3 -> {
+                        isRunning = false;
+                        System.out.println("Exiting the application. Goodbye!");
+                    }
+                    default -> System.out.println("Invalid choice. Please try again.");
                 }
-                default -> System.out.println("Invalid choice. Please try again.");
+            } catch (NoSuchElementException e) {
+                System.out.println("Invalid format of choice. Please use numbers & try again.");
+                scanner.nextLine();
+            } catch (Throwable t) {
+                System.out.println("An error occurred. Please try again.");
+                t.printStackTrace();
             }
             System.out.println();
         }
@@ -82,39 +90,43 @@ public class DispatcherController {
         scanner.close();
     }
 
-    private void clearFilters() {
-        parameterConverters.clear();
-    }
-
     private void searchAppliances(Scanner scanner) {
-        System.out.print("Enter the field name: ");
-        String field = scanner.nextLine();
-        System.out.println(dashSign.repeat(lineCount));
-        System.out.print("Enter the search keyword: ");
-        String keyword = scanner.nextLine();
-        System.out.println(dashSign.repeat(lineCount));
-        parameterConverters.put(field.trim(), keyword.trim());
+        String header = " Search Appliances - Select filters ";
+        String headerEqualSigns = equalSign.repeat((lineCount - header.length()) / 2);
+        System.out.println(headerEqualSigns + header + headerEqualSigns);
+        boolean isRunning = true;
+
+        while (isRunning) {
+            System.out.print("Enter the field name: ");
+            String field = scanner.nextLine();
+            System.out.print("Enter the search keyword: ");
+            String keyword = scanner.nextLine();
+            parameterConverters.put(field.trim(), keyword.trim());
+            System.out.println("Do you want to add more filters: ");
+            System.out.println("1. Yes");
+            System.out.println("2. No");
+            System.out.print("Enter your choice: ");
+            int needMoreFilters = scanner.nextInt();
+            scanner.nextLine();
+
+            if (needMoreFilters != 1) {
+                isRunning = false;
+            }
+        }
 
         List<Appliance<?>> searchResults = controllers.values().stream().map(it -> it.findBy(parameterConverters)).flatMap(Collection::stream).collect(Collectors.toList());
 
+        header = " Search Results ";
+        headerEqualSigns = equalSign.repeat((lineCount - header.length()) / 2);
+        System.out.println(headerEqualSigns + header + headerEqualSigns);
+
         if (searchResults.isEmpty()) {
-            System.out.println("No appliances found matching the search keyword.");
+            System.out.println("No appliances found matching the search filters: " + parameterConverters);
         } else {
-            String header = " Search Results ";
-            String headerEqualSigns = equalSign.repeat((lineCount - header.length()) / 2);
-            System.out.println(headerEqualSigns + header + headerEqualSigns);
-            System.out.println(dashSign.repeat(lineCount));
-            System.out.printf("| %-6s | %-16s | %-20s | %-15s | %-7s | %-17s | %-8s | %-6s | %-6s | %-6s | %-6s | %-10s |\n",
-                    "ID", "Model Name", "Brand", "Type", "Price", "Color", "Quantity", "Weight", "Height", "Width", "Depth", "Voltage");
-            System.out.println(dashSign.repeat(lineCount));
-            for (Appliance<?> appliance : searchResults) {
-                System.out.printf("| %-6d | %-16s | %-20s | %-15s | %-7d | %-17s | %-8d | %-6s | %-6s | %-6s | %-6s | %-10s |\n",
-                        appliance.getId(), appliance.getModelName(), appliance.getBrand(), appliance.getType(),
-                        appliance.getPrice(), appliance.getColor(), appliance.getQuantity(), appliance.getWeight(),
-                        appliance.getHeight(), appliance.getWidth(), appliance.getDepth(), appliance.getVoltage());
-            }
-            System.out.println(dashSign.repeat(lineCount));
+            System.out.println("Filters: " + parameterConverters);
+            printTable(searchResults);
         }
+        parameterConverters.clear();
     }
 
     private void viewAllAppliances(Scanner scanner) {
@@ -122,17 +134,23 @@ public class DispatcherController {
         boolean isRunning = true;
 
         while (isRunning) {
-            String header = " All Appliances Sort By ";
+            String header = " List All Appliances Sort By ";
             String headerEqualSigns = equalSign.repeat((lineCount - header.length()) / 2);
             System.out.println(headerEqualSigns + header + headerEqualSigns);
             System.out.println("1. ID ASC");
             System.out.println("2. ID DESC");
             System.out.println("3. Model Name ASC");
             System.out.println("4. Model Name DESC");
-            System.out.println("5. Price ASC");
-            System.out.println("6. Price DESC");
-            System.out.println("7. Quantity ASC");
-            System.out.println("8. Quantity DESC");
+            System.out.println("5. Brand ASC");
+            System.out.println("6. Brand DESC");
+            System.out.println("7. Type ASC");
+            System.out.println("8. Type DESC");
+            System.out.println("9. Price ASC");
+            System.out.println("10. Price DESC");
+            System.out.println("11. Color ASC");
+            System.out.println("12. Color DESC");
+            System.out.println("13. Quantity ASC");
+            System.out.println("14. Quantity DESC");
             System.out.println(dashSign.repeat(lineCount));
             System.out.print("Enter your choice: ");
             int sortOption = scanner.nextInt();
@@ -141,42 +159,58 @@ public class DispatcherController {
             switch (sortOption) {
                 case 1 -> {
                     isRunning = false;
-                    // Sort by ID ASC
                     printAllAppliances(Comparator.comparing(Appliance::getId));
                 }
                 case 2 -> {
                     isRunning = false;
-                    // Sort by ID DESC
                     printAllAppliances(Comparator.comparing(Appliance::getId, Comparator.reverseOrder()));
                 }
                 case 3 -> {
                     isRunning = false;
-                    // Sort by Name ASC
                     printAllAppliances(Comparator.comparing(Appliance::getModelName));
                 }
                 case 4 -> {
                     isRunning = false;
-                    // Sort by Name DESC
                     printAllAppliances(Comparator.comparing(Appliance::getModelName, Comparator.reverseOrder()));
                 }
                 case 5 -> {
                     isRunning = false;
-                    // Sort by Price ASC
-                    printAllAppliances(Comparator.comparing(Appliance::getPrice));
+                    printAllAppliances(Comparator.comparing(Appliance::getBrand));
                 }
                 case 6 -> {
                     isRunning = false;
-                    // Sort by Price DESC
-                    printAllAppliances(Comparator.comparing(Appliance::getPrice, Comparator.reverseOrder()));
+                    printAllAppliances(Comparator.comparing(Appliance::getBrand, Comparator.reverseOrder()));
                 }
                 case 7 -> {
                     isRunning = false;
-                    // Sort by Quantity ASC
-                    printAllAppliances(Comparator.comparing(Appliance::getQuantity));
+                    printAllAppliances(Comparator.comparing(Appliance::getType));
                 }
                 case 8 -> {
                     isRunning = false;
-                    // Sort by Quantity DESC
+                    printAllAppliances(Comparator.comparing(Appliance::getType, Comparator.reverseOrder()));
+                }
+                case 9 -> {
+                    isRunning = false;
+                    printAllAppliances(Comparator.comparing(Appliance::getPrice));
+                }
+                case 10 -> {
+                    isRunning = false;
+                    printAllAppliances(Comparator.comparing(Appliance::getPrice, Comparator.reverseOrder()));
+                }
+                case 11 -> {
+                    isRunning = false;
+                    printAllAppliances(Comparator.comparing(Appliance::getColor));
+                }
+                case 12 -> {
+                    isRunning = false;
+                    printAllAppliances(Comparator.comparing(Appliance::getColor, Comparator.reverseOrder()));
+                }
+                case 13 -> {
+                    isRunning = false;
+                    printAllAppliances(Comparator.comparing(Appliance::getQuantity));
+                }
+                case 14 -> {
+                    isRunning = false;
                     printAllAppliances(Comparator.comparing(Appliance::getQuantity, Comparator.reverseOrder()));
                 }
                 default -> System.out.println("Invalid choice. Please try again.");
@@ -185,21 +219,17 @@ public class DispatcherController {
     }
 
     private void printAllAppliances(Comparator<Appliance<?>> comparator) {
-        ((List<Appliance<?>>) appliances).sort(comparator);
         String header = " List of Appliances ";
         String headerEqualSigns = equalSign.repeat((lineCount - header.length()) / 2);
         System.out.println(headerEqualSigns + header + headerEqualSigns);
-        System.out.println(dashSign.repeat(lineCount));
-        System.out.printf("| %-6s | %-16s | %-20s | %-15s | %-7s | %-17s | %-8s | %-6s | %-6s | %-6s | %-6s | %-10s |\n",
-                "ID", "Model Name", "Brand", "Type", "Price", "Color", "Quantity", "Weight", "Height", "Width", "Depth", "Voltage");
-        System.out.println(dashSign.repeat(lineCount));
-        for (Appliance<?> appliance : appliances) {
-            System.out.printf("| %-6d | %-16s | %-20s | %-15s | %-7d | %-17s | %-8d | %-6s | %-6s | %-6s | %-6s | %-10s |\n",
-                    appliance.getId(), appliance.getModelName(), appliance.getBrand(), appliance.getType(),
-                    appliance.getPrice(), appliance.getColor(), appliance.getQuantity(), appliance.getWeight(),
-                    appliance.getHeight(), appliance.getWidth(), appliance.getDepth(), appliance.getVoltage());
-        }
-        System.out.println(dashSign.repeat(lineCount));
+        appliances.sort(comparator);
 
+        printTable(appliances);
+    }
+
+    private void printTable(List<Appliance<?>> appliances) {
+        System.out.println("Found: " + appliances.size() + " items");
+        System.out.println();
+        TableView.printTable(appliances);
     }
 }
