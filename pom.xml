@@ -7,7 +7,7 @@
     <groupId>org.itpu</groupId>
     <artifactId>itpu-household-appliances-warehouse</artifactId>
     <name>ITPU Household Appliance Warehouse</name>
-    <version>1.3.0</version>
+    <version>1.3.1</version>
     <developers>
         <developer>
             <id>shukhratbek</id>
