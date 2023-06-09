@@ -14,7 +14,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class DispatcherController {
-    private static final List<Appliance<?>> appliances = new ArrayList<>();
     private final Map<String, AbstractController<?>> controllers;
     private final Map<String, String> parameterConverters;
     private final int lineCount = 168;
@@ -130,7 +129,7 @@ public class DispatcherController {
     }
 
     private void viewAllAppliances(Scanner scanner) {
-        appliances.addAll(controllers.values().stream().map(AbstractController::getAll).flatMap(Collection::stream).toList());
+        List<Appliance<?>> appliances = new ArrayList<>(controllers.values().stream().map(AbstractController::getAll).flatMap(Collection::stream).toList());
         boolean isRunning = true;
 
         while (isRunning) {
@@ -159,66 +158,66 @@ public class DispatcherController {
             switch (sortOption) {
                 case 1 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getId));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getId));
                 }
                 case 2 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getId, Comparator.reverseOrder()));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getId, Comparator.reverseOrder()));
                 }
                 case 3 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getModelName));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getModelName));
                 }
                 case 4 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getModelName, Comparator.reverseOrder()));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getModelName, Comparator.reverseOrder()));
                 }
                 case 5 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getBrand));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getBrand));
                 }
                 case 6 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getBrand, Comparator.reverseOrder()));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getBrand, Comparator.reverseOrder()));
                 }
                 case 7 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getType));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getType));
                 }
                 case 8 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getType, Comparator.reverseOrder()));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getType, Comparator.reverseOrder()));
                 }
                 case 9 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getPrice));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getPrice));
                 }
                 case 10 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getPrice, Comparator.reverseOrder()));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getPrice, Comparator.reverseOrder()));
                 }
                 case 11 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getColor));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getColor));
                 }
                 case 12 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getColor, Comparator.reverseOrder()));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getColor, Comparator.reverseOrder()));
                 }
                 case 13 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getQuantity));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getQuantity));
                 }
                 case 14 -> {
                     isRunning = false;
-                    printAllAppliances(Comparator.comparing(Appliance::getQuantity, Comparator.reverseOrder()));
+                    printAllAppliances(appliances, Comparator.comparing(Appliance::getQuantity, Comparator.reverseOrder()));
                 }
                 default -> System.out.println("Invalid choice. Please try again.");
             }
         }
     }
 
-    private void printAllAppliances(Comparator<Appliance<?>> comparator) {
+    private void printAllAppliances(List<Appliance<?>> appliances, Comparator<Appliance<?>> comparator) {
         String header = " List of Appliances ";
         String headerEqualSigns = equalSign.repeat((lineCount - header.length()) / 2);
         System.out.println(headerEqualSigns + header + headerEqualSigns);
