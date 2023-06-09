@@ -6,4 +6,4 @@
 | 4   | Search for solutions   | 2023-05-19 | 2023-05-19 |  |
 | 5   | Software development   | 2023-05-19 | 2023-05-21 |  |
 | 6   | Development Completion | 2023-05-21 | 2023-06-07 |  |
-| 7   | Presentation |            |            |  |
+| 7   | Presentation           | 2023-05-07 | 2023-06-09 |  |
