@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/ShuhratBek/itpu-household-appliances-warehouse/compare/v1.3.1...v1.3.2) (2023-06-09)
+
+
+### Bug Fixes
+
+* fixed bug with accumulating appliances in getAll ([00d1c85](https://github.com/ShuhratBek/itpu-household-appliances-warehouse/commit/00d1c851dc0f7a53753c90fc41f665b0deb0a597))
+
 ### [1.3.1](https://github.com/ShuhratBek/itpu-household-appliances-warehouse/compare/v1.3.0...v1.3.1) (2023-06-09)
 
 ## [1.3.0](https://github.com/ShuhratBek/itpu-household-appliances-warehouse/compare/v1.2.0...v1.3.0) (2023-06-06)
